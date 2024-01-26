@@ -6,17 +6,19 @@ export default function App() {
 
     <View style={styles.container}>
 
-<Image
+      <Image
         style={styles.image}
         source={require('../../assets/Vector.png')}
       />
-      
+
+      <Text style={styles.texto}>Login</Text>
+
       <TextInput
-        style={styles.inputA}
+        style={styles.input}
         defaultValue='Digite seu email:'
       />
       <TextInput
-        style={styles.inputB}
+        style={styles.input}
         defaultValue='Digite sua senha:'
       />
       <TouchableOpacity style={styles.botao}>
@@ -34,31 +36,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderColor: 'white',
   },
-  inputA: {
-    width: '90%',
-    borderColor: 'white',
-    height: 40,
-    borderWidth: 1,
-    padding: 10,
-    marginTop: 100,
-    borderRadius:12,
-    color: 'white'
-  },
-  inputB: {
+  input: {
     width: '90%',
     borderColor: 'white',
     height: 40,
     borderWidth: 1,
     padding: 10,
     marginTop: 30,
-    borderRadius:12,
+    borderRadius: 12,
     color: 'white'
   },
   image: {
     width: 200,
     height: 200,
-    marginTop: 5,
-    borderRadius:12,
+    marginTop: 20,
+    borderRadius: 12,
   },
   botao: {
     width: '40%',
@@ -67,13 +59,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 80,
-    borderRadius:12,
+    marginTop: 60,
+    borderRadius: 12,
   },
   txtbotao: {
     color: 'white',
     textTransform: 'uppercase',
-  }
+  },
+  texto: {
+    color: '#CDC2C2',
+    fontSize: 30,
+    marginTop: 30,
+    fontWeight: 'semibold'
+    
+  },
 
 
 });
