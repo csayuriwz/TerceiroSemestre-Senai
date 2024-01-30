@@ -25,13 +25,13 @@ export default function App() {
     <View style={styles.container}>
 
       <View style={styles.quadrado}>
-        <Text >Contador: {count} </Text>
+        <Text style={styles.texto}>Contador: {count} </Text>
         <View style={styles.botoes}>
-          <TouchableOpacity onPress={increment} style={styles.botao} >
+          <TouchableOpacity onPress={increment} style={styles.botao2}  >
             <Text>Incrementar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={decrementar} style={styles.botao2} >
+          <TouchableOpacity onPress={decrementar} style={styles.botao1} >
             <Text>decrementar</Text>
           </TouchableOpacity>
         </View>
@@ -49,30 +49,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  botao: {
-    backgroundColor: '#A14E4E',
-  },
-  botao2: {
-    backgroundColor: '#A14E4E',
- 
-  },
   texto: {
-    color: 'black'
+    textDecorationColor: '',
+    marginBottom: 10,
+    
   },
   quadrado: {
     backgroundColor: '#CDC2C2',
     padding: 50,
     borderRadius: 20,
-    
-
-
   },
-  botoes: {
-   display: 'flex',
-   flexDirection: 'row',
-   justifyContent: 'space between'
-   
-   
+  botao1: {
+    borderRadius: 4,
+    borderWidth: 1,
+    width: 100,
+    height: 30,
+    
+  },
+  botao2: {
+    borderRadius: 4,
+    borderWidth: 1,
+    width: 100,
+    height: 30,
+    marginBottom: 10,
+
   }
 
 });

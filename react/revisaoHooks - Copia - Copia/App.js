@@ -28,26 +28,28 @@ export default function App() {
   return (
     <Container>
 
-      <View style={styles.quadrado}>
+      {/* titulo */}
+      <Titulo>{count} </Titulo>
 
-        {/* titulo */}
-        <Titulo>Contador: {count} </Titulo>
 
+      <View style={styles.botoes}>
         {/* BtnIncrement */}
         <Botao onPress={increment}  >
 
           {/* textoBtnIncrement */}
-          <TextoBotao>Incrementar</TextoBotao>
+          <TextoBotao>+</TextoBotao>
         </Botao>
 
         {/* BtnDecrement */}
         <Botao2 onPress={decrementar} >
 
           {/* textoBtnDecrement */}
-          <TextoBotao>Decrementar</TextoBotao>
+          <TextoBotao>-</TextoBotao>
         </Botao2>
 
       </View>
+
+
 
       <StatusBar style="auto" />
     </Container>
@@ -61,5 +63,12 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 2,
   },
+  botoes: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderColor: 'black',
+    borderWidth: 2,
+  }
 
 });
