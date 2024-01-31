@@ -57,9 +57,11 @@ export default function App() {
 const styles = StyleSheet.create({
   quadrado: {
     backgroundColor: '#CDC2C2',
-    padding: 50,
+    padding: 53,
     borderRadius: 20,
     borderWidth: 2,
+    height: 200,
+    width: 240,
   },
 
 });
