@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {useFonts, roboto_bold, Roboto_500Medium} from '@expo-google-fonts/roboto';
-import {Header} from './src/components/Header'
-import {ContainerApp} from './style'
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useFonts, roboto_bold, Roboto_500Medium } from '@expo-google-fonts/roboto';
+import { Header } from './src/components/Header'
+import { ContainerApp } from './style'
+import { Home } from './src/screens/Home/inedx';
 
 
 export default function App() {
@@ -19,11 +20,19 @@ export default function App() {
 
   return (
     <ContainerApp>
-      <StatusBar/>
+      <StatusBar
+        barStyle='default'
+        backgroundColor='transparent'
+        translucent
+      />
 
       {/* HEADER */}
-      <Header/>
+      <Header />
 
+      {/* HOME */}
+      <ScrollView>
+        <Home/>
+      </ScrollView>
     </ContainerApp>
   );
 }

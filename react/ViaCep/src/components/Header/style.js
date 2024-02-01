@@ -4,12 +4,13 @@ export const  HeaderContainer = styled.View`
     background-color: #F08B8B;
     height: 20%;
     justify-content: center;
-    box-shadow: 0px 0px 4px #333e33;
-    border-radius: 20px;
+    box-shadow: 0px 0px 12px  #333e33;
+    border-radius: 0px 0px 14px 14px;
+    align-items: center;
 `
 export const HeaderContent = styled.SafeAreaView`
-align-items: center;
-justify-content: center;
+
+margin-top: 30px;
 `
 export const TextHeader = styled.Text`
     font-size: 24px;
