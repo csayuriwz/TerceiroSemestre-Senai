@@ -1,0 +1,13 @@
+{
+    "cep": [
+        {
+            "id": 1,
+            "cep": "07170123",
+            "logadouro": "Rua lá de casa",
+            "bairro": "bairro la de casa",
+            "localidade": "Guarulhos",
+            "uf":"sp"
+        }
+    ]
+}
+  
