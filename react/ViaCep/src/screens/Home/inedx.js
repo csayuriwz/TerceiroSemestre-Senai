@@ -1,16 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BoxInput } from "../../components/BoxInput";
 import { ContainerForm, ContainerInput, ScrollForm } from "./style";
+import api from "../../../services/Services";
 
 export function Home() {
 
     //states - variaveis
-    const [cep, setCep] = useState('07181230');
-    const [logadouro,setLogadouro]  = useState();
-    const [Bairro,setBairro]  = useState();
-    const [cidade,setCidade]  = useState();
-    const [estado,setEstado]  = useState();
-    const [uf,setUf]  = useState();
+    const [endereco, setEndereco] = useState({
+        cep: '',
+        logradouro: null,
+        bairro: null,
+        cidade: null,
+        estado: null,
+        uf: null,
+    });
+
+
+    async function getEndereco() {
+        try {
+            const promise = await api.get(`$api{endereco.cep}`);
+            setEndereco({
+                ...endereco,
+                logradouro: promise.data.logradouro,
+                bairro: promise.data.bairro,
+                estado: promise.data.estado_info.nome,
+                cidade: promise.data.cidade,
+                uf: promise.data.estado,
+            });
+            console.warm('Salvo!');
+
+        } catch (error) {
+            console.log('erro ocorrido');
+        }
+    }
+
+    useEffect(() => {
+        if (endereco.cep.length === 8) {
+            console.warn('concluido!');
+            getEndereco();
+        }
+    }, [endereco.cep])
 
     return (
         <>
@@ -22,48 +51,41 @@ export function Home() {
                         KeyType='numeric'
                         MaxLenght={9}
                         editable={true}
-                        onChangeText={tx => setCep(tx)}
-                        fieldValue={cep}
+                        onChangeText={event => setEndereco({ ...endereco, cep: event })}
                     />
 
                     <BoxInput
                         textLabel='Logradouro:'
                         placeholder='Logradouro...'
                         MaxLenght={20}
-                        onChangeText={tx => setLogadouro(tx)}
-                        fieldValue={logadouro}
+                        fieldValue={endereco.logradouro}
                     />
-
                     <BoxInput
                         textLabel='Bairro'
                         placeholder='Bairro...'
                         MaxLenght={20}
-                        onChangeText={tx => setBairro(tx)}
-                        fieldValue={Bairro}
-                    />
 
+                        fieldValue={endereco.bairro}
+                    />
                     <BoxInput
                         textLabel='Cidade'
                         placeholder='Cidade...'
                         MaxLenght={20}
-                        onChangeText={tx => setCidade(tx)}
-                        fieldValue={cidade}
+                        fieldValue={endereco.cidade}
                     />
                     <ContainerInput>
                         <BoxInput
                             textLabel='Estado'
                             placeholder='Estado...'
                             MaxLenght={20}
-                            fieldValue={estado}
-                            onChangeText={tx => setEstado(tx)}
+                            fieldValue={endereco.estado}
                         />
 
                         <BoxInput
                             textLabel='UF'
                             placeholder='UF...'
                             MaxLenght={4}
-                            onChangeText={tx => setUf(tx)}
-                            fieldValue={uf}
+                            fieldValue={endereco.uf}
                         />
                     </ContainerInput>
 
