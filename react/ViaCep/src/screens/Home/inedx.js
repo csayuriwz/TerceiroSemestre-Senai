@@ -18,7 +18,8 @@ export function Home() {
 
     async function getEndereco() {
         try {
-            const promise = await api.get(`$api{endereco.cep}`);
+            const promise = await api.get(`${api}${endereco.cep}`);
+            console.warn('concluido!');
             setEndereco({
                 ...endereco,
                 logradouro: promise.data.logradouro,
@@ -36,7 +37,6 @@ export function Home() {
 
     useEffect(() => {
         if (endereco.cep.length === 8) {
-            console.warn('concluido!');
             getEndereco();
         }
     }, [endereco.cep])
