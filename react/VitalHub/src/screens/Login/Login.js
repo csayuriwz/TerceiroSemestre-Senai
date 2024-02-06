@@ -15,9 +15,11 @@ export const Login = () => {
                 Entrar ou criar conta
             </Title>
 
-            <Input />
+            <Input
+             placeholder="Usuario ou email"
+            />
 
-            <Input />
+            <Input placeholder="Senha" />
 {/* 
             <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
