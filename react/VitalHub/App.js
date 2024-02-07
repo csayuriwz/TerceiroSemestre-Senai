@@ -7,14 +7,15 @@ import { Navegacao } from './src/screens/Navegacao/Navegacao';
 import { Login } from './src/screens/Login/Login';
 
 
-import { useFonts, MontserratAlternates_600SemiBold } from '@expo-google-fonts/montserrat-alternates'
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium,  } from '@expo-google-fonts/montserrat-alternates'
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
 
   const [fontsLoaded, fontError] = useFonts({
-    MontserratAlternates_600SemiBold
+    MontserratAlternates_600SemiBold,
+    MontserratAlternates_500Medium
   });
 
   if (!fontsLoaded && !fontError) {

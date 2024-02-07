@@ -1,0 +1,9 @@
+import styled from "styled-components";
+
+export const ContentAccount = styled.View`
+width: 284px;
+height: 20px;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+`

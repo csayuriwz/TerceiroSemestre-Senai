@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BoxInput } from "../../components/BoxInput";
 import { ContainerForm, ContainerInput, ScrollForm } from "./style";
-import api from "../../../services/Services";
+import api from "../../../services/Service"
 
 export function Home() {
 
@@ -18,7 +18,7 @@ export function Home() {
 
     async function getEndereco() {
         try {
-            const promise = await api.get(`${api}${endereco.cep}`);
+            const promise = await api.get(`https://api.postmon.com.br/v1/cep/${endereco.cep}`);
             console.warn('concluido!');
             setEndereco({
                 ...endereco,
@@ -36,7 +36,7 @@ export function Home() {
     }
 
     useEffect(() => {
-        if (endereco.cep.length === 8) {
+        if (endereco.cep.length >= 8) {
             getEndereco();
         }
     }, [endereco.cep])
