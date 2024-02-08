@@ -9,4 +9,11 @@ color: #4E4B59;
 export const LinkBold = styled(TextAccount)`
 color: #4D659D;
 text-decoration: underline #4D659D;
+
+`
+
+
+export const LinkUser = styled(LinkBold)`
+margin-bottom: 30px;
+
 `
