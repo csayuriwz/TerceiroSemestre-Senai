@@ -10,7 +10,8 @@ import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
 import { Cadastro } from './src/screens/Cadastro/Cadastro';
 import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
 
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium } from '@expo-google-fonts/montserrat-alternates'
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/montserrat-alternates'
+import { Perfil } from './src/screens/Perfil/Perfil';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,8 @@ export default function App() {
   const [fontsLoaded, fontError] = useFonts({
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
-    Quicksand_500Medium
+    Quicksand_500Medium,
+    Quicksand_600SemiBold
 
   });
 
@@ -73,6 +75,12 @@ export default function App() {
           name='VerificarEmail'
           component={VerificarEmail}
           options={{ title: "VerificarEmail" }}
+        />
+
+        <Stack.Screen
+          name='Perfil'
+          component={Perfil}
+          options={{ title: "Perfil" }}
         />
 
       </Stack.Navigator>

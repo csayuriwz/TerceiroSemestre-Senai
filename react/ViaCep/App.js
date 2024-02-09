@@ -5,7 +5,6 @@ import { Header } from './src/components/Header'
 import { ContainerApp } from './style'
 import { Home } from './src/screens/Home/inedx';
 
-
 export default function App() {
 
   let [fontsLoaded, fontError] = useFonts({

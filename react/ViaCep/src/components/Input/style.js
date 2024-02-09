@@ -13,7 +13,6 @@ export const InputText = styled.TextInput`
     ${props => props.editable && css`
         background-color: #f6f6f6;
     `
-    
     }
 `
 

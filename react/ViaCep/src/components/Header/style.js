@@ -9,7 +9,6 @@ export const  HeaderContainer = styled.View`
     align-items: center;
 `
 export const HeaderContent = styled.SafeAreaView`
-
 margin-top: 30px;
 `
 export const TextHeader = styled.Text`
@@ -17,5 +16,3 @@ export const TextHeader = styled.Text`
     color: #333e33;
     font-family: 'Roboto_500Medium';
 `;
-
-
