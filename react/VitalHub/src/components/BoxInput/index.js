@@ -3,7 +3,7 @@ import { Label } from "../Label";
 import { FieldContent } from "./style";
 
 export const BoxInput = ({
-    fieldWidht = 100,
+    fieldWidth = 100,
     editable = false,
     textLabel,
     placeholder,
@@ -14,7 +14,7 @@ export const BoxInput = ({
 
 }) => {
     return (
-       <FieldContent fieldWidht={fieldWidht}>
+       <FieldContent fieldWidth={fieldWidth}>
         
         <Label textLabel={textLabel}/>
 

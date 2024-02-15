@@ -32,7 +32,6 @@ export const InputNumber = styled.TextInput.attrs({
 
 export const InputText = styled.TextInput`
     height: 53px;
-    width: 80%;
     border: 1px solid #F5F3F3;
     padding: 16px;
     border-radius: 5px;

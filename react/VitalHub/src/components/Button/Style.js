@@ -23,3 +23,8 @@ export const ButtonGoogle = styled(Button)`
     gap: 27px;
     margin-bottom: 30px;
 `
+
+export const ButtonP = styled(Button)`
+    width: 80%;
+    margin-top: 30px;
+`
