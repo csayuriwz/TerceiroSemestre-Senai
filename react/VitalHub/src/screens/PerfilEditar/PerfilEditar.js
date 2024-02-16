@@ -8,11 +8,13 @@ import { SubTitle } from '../../components/SubTitle/style'
 import { Title } from '../../components/Title/style'
 
 import { ScrollView } from 'react-native'
+3
 
-export function Perfil() {
+export function PerfilEditar() {
     return (
         <ScrollView>
             <Container>
+
 
                 <ImageP
                     source={require('../../../assets/Rectangle 425.png')}
@@ -66,7 +68,6 @@ export function Perfil() {
 
                     />
 
-
                     <BoxInput
                         textLabel='Cidade'
                         placeholder='Cidade...'
@@ -76,7 +77,6 @@ export function Perfil() {
 
                     />
 
-
                 </ContainerInputP>
 
 
@@ -84,6 +84,9 @@ export function Perfil() {
                     <ButtonTitle>Salvar</ButtonTitle>
                 </ButtonP>
 
+                <ButtonP>
+                    <ButtonTitle>Editar</ButtonTitle>
+                </ButtonP>
 
             </Container>
 

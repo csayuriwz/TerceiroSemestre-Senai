@@ -9,6 +9,8 @@ import { RecuperarSenha } from './src/screens/RecuperarSenha/RecuperarSenha';
 import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
 import { Cadastro } from './src/screens/Cadastro/Cadastro';
 import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
+import { PerfilEditar } from './src/screens/PerfilEditar/PerfilEditar';
+import { Home } from './src/screens/Home/Home';
 
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/montserrat-alternates'
 import { Perfil } from './src/screens/Perfil/Perfil';
@@ -38,7 +40,9 @@ export default function App() {
     //option(title) - titulo da tela
 
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{
+        headerShown: false
+      }}>
         <Stack.Screen
           name="Navegacao"
           component={Navegacao}
@@ -81,6 +85,18 @@ export default function App() {
           name='Perfil'
           component={Perfil}
           options={{ title: "Perfil" }}
+        />
+
+        <Stack.Screen
+          name='PerfilEditar'
+          component={PerfilEditar}
+          options={{ title: "PerfilEditar" }}
+        />
+
+        <Stack.Screen
+          name='Home'
+          component={Home}
+          options={{ title: "Home" }}
         />
 
       </Stack.Navigator>
