@@ -12,7 +12,7 @@ import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
 import { PerfilEditar } from './src/screens/PerfilEditar/PerfilEditar';
 import { Home } from './src/screens/Home/Home';
 
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/montserrat-alternates'
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular} from '@expo-google-fonts/montserrat-alternates'
 import { Perfil } from './src/screens/Perfil/Perfil';
 
 const Stack = createNativeStackNavigator();
@@ -23,7 +23,8 @@ export default function App() {
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
     Quicksand_500Medium,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
+    Quicksand_400Regular
 
   });
 

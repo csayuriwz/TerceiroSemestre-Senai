@@ -4,10 +4,21 @@ import CalendarList from "../../components/Calendario"
 import { Container } from "../../components/Container/Style"
 import { Header } from "../../components/Header/Header"
 import { FilterCustom } from "./Style"
-import { ScrollView } from "react-native"
+import { FlatList, FlatListComponent } from "react-native"
+import { ListComponent } from "../../components/List/List"
+import { AntDesign } from '@expo/vector-icons';
+import { CardA } from "../../components/Card/Card"
+
+const Consultas = [
+    { id: 1, nome: "Carlos", situacao: "pendente" },
+    { id: 2, nome: "Carlos", situacao: "Realizadas" },
+    { id: 3, nome: "Carlos", situacao: "Canceladas" },
+    { id: 4, nome: "Carlos", situacao: "Realizadas" },
+    { id: 5, nome: "Carlos", situacao: "Canceladas" },
+];
 
 export const Home = () => {
-    const [statusLista, setStatusLista] = useState("pendente")
+    const [statusLista, setStatusLista] = useState("Realizadas")
     return (
 
         <Container>
@@ -36,11 +47,23 @@ export const Home = () => {
                     onPress={() => setStatusLista("Canceladas")} />
             </FilterCustom>
 
-            <ContainerConsulta>
+            {/* Cards */}
+     
 
-            </ContainerConsulta>
+            <ListComponent
+                data={Consultas}
+                keyExtractor={(item) => item.id}
 
+                renderItem={({ item }) =>
+                    statusLista == item.situacao && (
+                        <CardA
+                            situacao={item.situacao}
+                        />
 
+                    )
+                }
+
+            />
         </Container>
 
     )
