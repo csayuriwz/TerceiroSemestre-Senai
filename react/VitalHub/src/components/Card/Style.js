@@ -44,7 +44,7 @@ export const TextAge = styled.Text`
 export const TextBold = styled.Text`
     font-family: Quicksand_600SemiBold;
     font-size: 14px;
-    color: ${(props) => props.situacao == "pendente" ? "#49b3ba" : "#8c8a97"};
+    color: ${(props) => props.situacao == "Pendentes" ? "#49b3ba" : "#8c8a97"};
 
 `
 
@@ -61,7 +61,7 @@ export const ClockCard = styled.View`
     border-radius: 5px;
     padding: 4px 23px;
     align-items: center;
-    background-color: ${(props) => props.situacao == "pendente" ? "#e8fcfd" : "#F1F0F5"};
+    background-color: ${(props) => props.situacao == "Pendentes" ? "#e8fcfd" : "#F1F0F5"};
 `
 
 export const BtnCard = styled.TouchableOpacity`
@@ -71,7 +71,7 @@ export const BtnCard = styled.TouchableOpacity`
 export const BtnText = styled.Text`
     font-size: 12px;
     font-family: MontserratAlternates_500Medium;
-    color: ${(props) => props.situacao == "pendente" ? "#C81D25" : "#344F8F"};
+    color: ${(props) => props.situacao == "Pendentes" ? "#C81D25" : "#344F8F"};
 
 `
 

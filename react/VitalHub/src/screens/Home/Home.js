@@ -10,7 +10,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { CardA } from "../../components/Card/Card"
 
 const Consultas = [
-    { id: 1, nome: "Carlos", situacao: "pendente" },
+    { id: 1, nome: "Carlos", situacao: "Pendentes" },
     { id: 2, nome: "Carlos", situacao: "Realizadas" },
     { id: 3, nome: "Carlos", situacao: "Canceladas" },
     { id: 4, nome: "Carlos", situacao: "Realizadas" },
@@ -18,7 +18,14 @@ const Consultas = [
 ];
 
 export const Home = () => {
-    const [statusLista, setStatusLista] = useState("Realizadas")
+
+    // state para o uso dos cards
+    const [statusLista, setStatusLista] = useState("Pendentes")
+
+    // state para o uso dos modias
+
+    const [showModal,setShowModal] = useState("")
+
     return (
 
         <Container>
@@ -32,23 +39,26 @@ export const Home = () => {
             {/* container */}
             <FilterCustom>
                 {/* botao p consultas agendadas */}
-                <BtnList textButton={"Agendadas"}
-                    clickButton={statusLista === "pendente"}
-                    onPress={() => setStatusLista("pendente")} />
+                <BtnList
+                    textButton={"Agendadas"}
+                    clickButton={statusLista === "Pendentes"}
+                    onPress={() => setStatusLista("Pendentes")} />
 
                 {/* botao p consultas realizadas */}
-                <BtnList textButton={"Realizadas"}
+                <BtnList
+                    textButton={"Realizadas"}
                     clickButton={statusLista === "Realizadas"}
                     onPress={() => setStatusLista("Realizadas")} />
 
                 {/* botao p consultas canceladas */}
-                <BtnList textButton={"Canceladas"}
+                <BtnList
+                    textButton={"Canceladas"}
                     clickButton={statusLista === "Canceladas"}
                     onPress={() => setStatusLista("Canceladas")} />
             </FilterCustom>
 
             {/* Cards */}
-     
+
 
             <ListComponent
                 data={Consultas}
@@ -62,7 +72,7 @@ export const Home = () => {
 
                     )
                 }
-
+                showsHorizontalScrollIndicator={false}
             />
         </Container>
 

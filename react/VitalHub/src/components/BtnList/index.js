@@ -3,10 +3,10 @@ import { BtnTabsStyle, BtnTextStyle } from "./Style"
 export const BtnList = ({
     textButton,
     clickButton = false,
-    onpress
+    onPress
 }) => {
     return (
-        <BtnTabsStyle clickButton={clickButton} onPress={onpress}>
+        <BtnTabsStyle clickButton={clickButton} onPress={onPress}>
             <BtnTextStyle clickButton={clickButton}>
                 {textButton}
             </BtnTextStyle>
