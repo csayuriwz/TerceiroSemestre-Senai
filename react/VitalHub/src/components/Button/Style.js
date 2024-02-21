@@ -27,3 +27,8 @@ export const ButtonP = styled(Button)`
     width: 80%;
     margin-top: 30px;
 `
+
+export const ModalBtn = styled(Button)`
+    width: 80%;
+
+`

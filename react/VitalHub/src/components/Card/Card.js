@@ -3,9 +3,9 @@ import { BtnCard, BtnText, ClockCard, ContainerCard, ContentCard, DataProfileCar
 
 export const 
 CardA = ({
-    situacao = "Pendente",
+    situacao = "Pendentes",
     onPressCancel,
-    onPressAppointment
+    onPressAppointment,
 }) => {
     return (
         <ContainerCard>
@@ -39,7 +39,7 @@ CardA = ({
                                 </>
                             ) : situacao == "Pendentes" ?
                                 (
-                                    <BtnCard>
+                                    <BtnCard onPress={onPressCancel}>
                                         <BtnText situacao={situacao}>Cancelar</BtnText>
                                     </BtnCard>
                                 ) : (

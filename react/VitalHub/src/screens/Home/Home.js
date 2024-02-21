@@ -8,6 +8,7 @@ import { FlatList, FlatListComponent } from "react-native"
 import { ListComponent } from "../../components/List/List"
 import { AntDesign } from '@expo/vector-icons';
 import { CardA } from "../../components/Card/Card"
+import { CancelModal } from "../../components/CancelModal/CancelationModal"
 
 const Consultas = [
     { id: 1, nome: "Carlos", situacao: "Pendentes" },
@@ -24,7 +25,8 @@ export const Home = () => {
 
     // state para o uso dos modias
 
-    const [showModal,setShowModal] = useState("")
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalA, setShowModalA] = useState(false);
 
     return (
 
@@ -68,12 +70,22 @@ export const Home = () => {
                     statusLista == item.situacao && (
                         <CardA
                             situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            // onPressAppointment={() => setShowModalA(true)}
                         />
 
                     )
                 }
-                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
             />
+
+            {/* modal de cancelar */}
+            <CancelModal
+                visible={showModalCancel} 
+                setShowModalCancel={setShowModalCancel}
+            />
+
+
         </Container>
 
     )
