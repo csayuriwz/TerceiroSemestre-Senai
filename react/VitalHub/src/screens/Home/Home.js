@@ -59,9 +59,6 @@ export const Home = () => {
                     onPress={() => setStatusLista("Canceladas")} />
             </FilterCustom>
 
-            {/* Cards */}
-
-
             <ListComponent
                 data={Consultas}
                 keyExtractor={(item) => item.id}

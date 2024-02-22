@@ -16,13 +16,12 @@ export const Input = styled.TextInput.attrs({
 export const InputNumber = styled.TextInput.attrs({
     keyboardType: 'numeric',
 })
-`
+    `
     width: 15%;
     padding:0px;
     padding-bottom: 2px;
     border: 2px solid #34898F;
     border-radius:5px;
-
     line-height:52px;
     font-size: 40px;
     flex-direction: 'row';
@@ -43,6 +42,22 @@ export const InputText = styled.TextInput`
         background-color: #F5F3F3;
     `
     }
+`
+
+export const InputP = styled(Input)`
+    border: 2px solid #49B3BA;
+    border-radius:5px;
+    width: 80%;
+    height: 121px;
+
+`
+
+export const InputD = styled(Input)`
+    border: 2px solid #49B3BA;
+    border-radius:5px;
+    width: 80%;
+    height: 80px;
+
 `
 
 

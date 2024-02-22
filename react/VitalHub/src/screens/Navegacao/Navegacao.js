@@ -42,6 +42,11 @@ export const Navegacao = ({ navigation }) => {
                 title="Home"
                 onPress={() => navigation.navigate("Home")}
             />
+
+            <Button
+                title="Inserir Prontuario"
+                onPress={() => navigation.navigate("InserirProntuario")}
+            />
         </View>
     )
 }
