@@ -44,7 +44,7 @@ export const InputPerfil = styled.TextInput.attrs({
     padding-left: 16px;
     background-color:#F5F3F3;
     margin-bottom: 24px;
-    padding-top: ${(props) => `${props.customP}`}; 
+    padding-top: ${(props) => `${props.customP}px`}; 
     
     
 

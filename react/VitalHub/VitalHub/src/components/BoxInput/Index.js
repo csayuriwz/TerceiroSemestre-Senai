@@ -6,80 +6,82 @@ export const BoxInput = ({
     fieldWidth = 100,
     customHeight = 53,
     editable = false,
-    maxLength,
+    textLabel,
+    placeholder,
     fieldValue = null,
     onChangeText,
     keyboardType = 'default',
+    maxLength,
     customP,
     multiline,
-    numberOfLines,
-    textLabel,
-    placeholder,
+    numberOfLines
 
 
 }) => {
-    return (
-
+    return(
+        // "conteúdo do campo" tipo a div sabe?
         <FieldContent fieldWidth={fieldWidth}>
+            {/* label e input */}
 
-            <Label
+            <Label 
                 textLabel={textLabel}
-            />
+            /> 
 
             <Input
-                multiline={multiline}
-                placeholder={placeholder}
-                keyboardType={keyboardType}
-                maxLength={maxLength}
-                editable={editable}
-                customHeight={customHeight}
-                fieldValue={fieldValue}
-                numberOfLines={numberOfLines}
-                customP={customP}
-                onChangeText={onChangeText}
+            numberOfLines={numberOfLines}
+            multiline={multiline}
+            placeholder={placeholder}
+            editable={editable}
+            keyboardType={keyboardType}
+            maxLength={maxLength}
+            fieldValue={fieldValue}
+            onChangeText={onChangeText}
+            customHeight={customHeight}
+            customP={customP}
             />
 
         </FieldContent>
-
+        
     )
 }
 
 export const BoxInput2 = ({
-    placeholder,
-    keyboardType = 'default',
-    maxLength,
-    customHeight = 53,
     fieldWidth = 100,
-    fieldValue = null,
+    customHeight = 53,
     editable = false,
     textLabel,
+    placeholder,
+    fieldValue = null,
     onChangeText,
+    keyboardType = 'default',
+    maxLength,
     customP
 
 }) => {
-    return (
-       
-        <FieldContent
+    return(
+        // "conteúdo do campo" tipo a div sabe?
+        <FieldContent 
             fieldWidth={fieldWidth}
-        >
+            >
+            {/* label e input */}
 
-            <Label
+            <Label 
                 textLabel={textLabel}
-            />
+                /> 
 
             <InputP
-                editable={editable}
-                keyboardType={keyboardType}
-                fieldValue={fieldValue}
-                onChangeText={onChangeText}
-                customP={customP}
-                placeholder={placeholder}
-                maxLength={maxLength}
-                customHeight={customHeight}
+            placeholder={placeholder}
+            editable={editable}
+            keyboardType={keyboardType}
+            maxLength={maxLength}
+            fieldValue={fieldValue}
+            onChangeText={onChangeText}
+            customHeight={customHeight}
+            customP={customP}
             />
 
         </FieldContent>
-
+        
     )
 }
 

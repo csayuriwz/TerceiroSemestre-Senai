@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 
-export const ButtonCardStyle = styled.TouchableOpacity`
+export const ButtonCadStyle = styled.TouchableOpacity`
     padding: 12px 14px;
     border-radius: 5px;
 

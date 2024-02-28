@@ -13,8 +13,8 @@ export const CancelattionModal = ({
         <Modal 
             {...rest} 
             visible={visible} 
-            animationType="fade"
             transparent={true}
+            animationType="fade"
         >
             {/* Container */}
             <PatientModal>

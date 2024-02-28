@@ -1,4 +1,4 @@
-import { BtnConsultType, BtnTextConsultType, ButtonCardStyle, ButtonTextCad } from "./Style"
+import { BtnConsultType, BtnTextConsultType, ButtonCadStyle, ButtonTextCad } from "./Style"
 
 
 export const ButtonCadastro = ({
@@ -7,9 +7,9 @@ export const ButtonCadastro = ({
     onPress
 }) => {
     return(
-        <ButtonCardStyle clickButton={clickButton} onPress={onPress}>
+        <ButtonCadStyle clickButton={clickButton} onPress={onPress}>
             <ButtonTextCad clickButton={clickButton}> {textButton} </ButtonTextCad>
-        </ButtonCardStyle>
+        </ButtonCadStyle>
     )
 }
 

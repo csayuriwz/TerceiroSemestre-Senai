@@ -5,37 +5,37 @@ import CalendarComponent from "../../components/CalendarComponent/CalendarCompon
 import { ButtonModal, ButtonSecondary, ButtonSecondaryText } from "../../components/CancelattionModal/Style"
 import { TitleBlackDoctor } from "../../components/CardMedico/Style"
 import { ModalSubtitle2 } from "../../components/ConsultModal/Style"
-import { ClinicContent, ConatinerC, InputContent } from "../../components/Container/Style"
+import { ClinicContent, ContainerClinica, InputContent } from "../../components/Container/Style"
 import InputSelect from "../../components/InputSelect/InputSelect"
 
 export const CalendarioPaciente = () => {
     const [showModalAppointment, setShowModalAppointment] = useState(false)
-    return (
-        <ConatinerC>
-            <ClinicContent>
-                <TitleBlackDoctor>Selecionar data</TitleBlackDoctor>
+    return(
+        <ContainerClinica>
+        <ClinicContent>
+            <TitleBlackDoctor>Selecionar data</TitleBlackDoctor>
 
-                <CalendarComponent />
-                <InputContent>
-                    <ModalSubtitle2>Selecione um horário disponível</ModalSubtitle2>
-                    <InputSelect />
-                </InputContent>
+            <CalendarComponent/>
+            <InputContent>
+            <ModalSubtitle2>Selecione um horário disponível</ModalSubtitle2>
+            <InputSelect/>
+            </InputContent>
+            
 
+            {/* Botão */}
+            <ButtonModal onPress={() => setShowModalAppointment(true)}>
+                <ButtonTitle>Continuar</ButtonTitle>
+            </ButtonModal>
 
-                {/* Botão */}
-                <ButtonModal onPress={() => setShowModalAppointment(true)}>
-                    <ButtonTitle>Continuar</ButtonTitle>
-                </ButtonModal>
+            <ButtonSecondary>
+                <ButtonSecondaryText>Cancelar</ButtonSecondaryText>
+            </ButtonSecondary>
+        </ClinicContent>
 
-                <ButtonSecondary>
-                    <ButtonSecondaryText>Cancelar</ButtonSecondaryText>
-                </ButtonSecondary>
-            </ClinicContent>
-
-            <AppointmentModalConsulta
+        <AppointmentModalConsulta
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
-            />
-        </ConatinerC>
+        />
+    </ContainerClinica>
     )
 }

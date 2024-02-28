@@ -42,30 +42,30 @@ const CalendarComponent = () => {
       }}
       markedDates={{
         [selected]: {
-          disableTouchEvent: true,
           selected: true,
+          disableTouchEvent: true
         },
       }}
 
       minDate={startingDate}
 
       theme={{
-        
-        textDisabledColor : '#C6C5CE',     
-        selectedDayBackgroundColor: '#60BFC5',
-        todayTextColor : '#5F5C6B',   
-        selectedDayTextColor: '#FAFAFA',
         calendarBackground : '#FAFAFA',
         arrowColor : '#49B3BA',
+        textDisabledColor : '#C6C5CE',     
+        todayTextColor : '#5F5C6B',   
+        selectedDayTextColor: '#FAFAFA',
+        selectedDayBackgroundColor: '#60BFC5',
 
         textDayFontSize : 16,
-        textDayHeaderFontSize : 12,
         textMonthFontSize : 20,
+        textDayHeaderFontSize : 12,
+
         textDayStyle : { "color" : '#5F5C6B'},
 
         textDayFontFamily: "Quicksand_600SemiBold",
-        textMonthFontFamily: "MontserratAlternates_600SemiBold",
         textDayHeaderFontFamily: "Quicksand_600SemiBold",
+        textMonthFontFamily: "MontserratAlternates_600SemiBold",
       }}
     />
   );

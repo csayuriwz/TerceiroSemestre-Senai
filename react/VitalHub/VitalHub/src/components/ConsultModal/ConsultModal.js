@@ -1,9 +1,9 @@
 import { Modal } from "react-native"
-import {  BtnTitle } from "../Button/Style"
-import { ModalBtn, SecondaryBtn, SecondaryBtnT, ModalContent, SubTitleM, PatientModal, TitleBlackBold } from "./Style"
+import {  ButtonTitle } from "../Button/Style"
+import { ButtonModal, ButtonSecondary, ButtonSecondaryText, ModalContent, ModalSubtitle, PatientModal, TitleBlackBold } from "./Style"
 import { ContainerButton } from "../Container/Style"
 import { InputP } from "../Input/Index"
-import { BtnTipoConsulta } from "../ButtonCadastro/ButtonCadastro"
+import { ButtonAgendar } from "../ButtonCadastro/ButtonCadastro"
 
 
 export const ConsultModal = ({
@@ -30,26 +30,26 @@ export const ConsultModal = ({
                     <TitleBlackBold>Agendar consulta</TitleBlackBold>
 
                     {/* Descrição */}
-                    <SubTitleM>Qual o nível da consulta</SubTitleM>
+                    <ModalSubtitle>Qual o nível da consulta</ModalSubtitle>
                     <ContainerButton>
-                        <BtnTipoConsulta
+                        <ButtonAgendar
                             textButton={"Rotina"}
                             clickButton= {statusModal === "rotina"}
                             onPress={() => setStatusModal("rotina")}
                         />
-                        <BtnTipoConsulta
+                        <ButtonAgendar
                             textButton={"Exame"}
                             clickButton= {statusModal === "exame"}
                             onPress={() => setStatusModal("exame")}
                         />
-                        <BtnTipoConsulta
+                        <ButtonAgendar
                             textButton={"Urgência"}
                             clickButton= {statusModal === "urgencia"}
                             onPress={() => setStatusModal("urgencia")}
                         />
                     </ContainerButton>
 
-                    <SubTitleM>Qual o nível da consulta</SubTitleM>
+                    <ModalSubtitle>Qual o nível da consulta</ModalSubtitle>
                     <InputP
                         placeholder={'Informe a localização'}
                         editable={true}
@@ -58,13 +58,13 @@ export const ConsultModal = ({
                     />
 
                      {/* Botão */}
-                    <ModalBtn>
-                        <BtnTitle>Confirmar</BtnTitle>
-                    </ModalBtn>
+                    <ButtonModal>
+                        <ButtonTitle>Confirmar</ButtonTitle>
+                    </ButtonModal>
 
-                    <SecondaryBtn onPress={() => setShowModalConsult(false)}>
-                        <SecondaryBtnT>Cancelar</SecondaryBtnT>
-                    </SecondaryBtn> 
+                    <ButtonSecondary onPress={() => setShowModalConsult(false)}>
+                        <ButtonSecondaryText>Cancelar</ButtonSecondaryText>
+                    </ButtonSecondary> 
 
                 </ModalContent>
             </PatientModal>

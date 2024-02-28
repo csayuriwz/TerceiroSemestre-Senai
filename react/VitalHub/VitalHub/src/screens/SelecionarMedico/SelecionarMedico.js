@@ -1,9 +1,9 @@
-import { BtnTitle } from "../../components/Button/Style"
-import { BtnModal, BtnSegundario, BtnSegundarioText } from "../../components/CancelattionModal/Style"
-import { ClinicaLis } from "../../components/CardClinic/Style"
+import { ButtonTitle } from "../../components/Button/Style"
+import { ButtonModal, ButtonSecondary, ButtonSecondaryText } from "../../components/CancelattionModal/Style"
+import { ListClinic } from "../../components/CardClinic/Style"
 import { CardMedico } from "../../components/CardMedico/CardMedico"
 import { TitleBlackDoctor } from "../../components/CardMedico/Style"
-import { ClinicContent, ConatinerC } from "../../components/Container/Style"
+import { ClinicContent, ContainerClinica } from "../../components/Container/Style"
 
 export const Doctor = [
     {id: 1, 
@@ -28,11 +28,11 @@ export const Doctor = [
 
 export const SelecionarMedico = () => {
     return(
-        <ConatinerC>
+        <ContainerClinica>
         <ClinicContent>
             <TitleBlackDoctor>Selecionar médico</TitleBlackDoctor>
 
-            <ClinicaLis
+            <ListClinic
             //nome da constante com dados
             data={Doctor}
             //ldefinindo quem sera a key do seu item na constante
@@ -48,14 +48,14 @@ export const SelecionarMedico = () => {
                 )}
             />
             {/* Botão */}
-            <BtnModal>
-                <BtnTitle>Continuar</BtnTitle>
-            </BtnModal>
+            <ButtonModal>
+                <ButtonTitle>Continuar</ButtonTitle>
+            </ButtonModal>
 
-            <BtnSegundario>
-                <BtnSegundarioText>Cancelar</BtnSegundarioText>
-            </BtnSegundario>
+            <ButtonSecondary>
+                <ButtonSecondaryText>Cancelar</ButtonSecondaryText>
+            </ButtonSecondary>
         </ClinicContent>
-    </ConatinerC>
+    </ContainerClinica>
     )
 }

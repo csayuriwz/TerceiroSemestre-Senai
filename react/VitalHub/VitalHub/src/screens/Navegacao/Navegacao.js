@@ -1,55 +1,55 @@
-import { Btn, View } from "react-native";
+import { Button, View } from "react-native";
 
 export const Navegacao = ({navigation}) => {
     return(
         <View>
-            <Btn
-                title="Login"
+            <Button
+                title="login"
                 onPress={() => navigation.navigate('Login')}
             />
-            <Btn
+            <Button
                 title="Verifique seu email"
                 onPress={() => navigation.navigate('VerifiqueEmail')}
             />
-            <Btn
+            <Button
                 title="Nova senha"
                 onPress={() => navigation.navigate('NovaSenha')}
             />
-            <Btn
-                title="Perfil Paciente"
+            <Button
+                title="Perfil"
                 onPress={() => navigation.navigate('Perfil')}
             />
-            <Btn
-                title="Prontuario Paciente"
+            <Button
+                title="Prontuario"
                 onPress={() => navigation.navigate('Prontuario')}
             />
-            <Btn
-                title="Consultas Medico"
+            <Button
+                title="Consultas"
                 onPress={() => navigation.navigate('Home')}
             />
-            <Btn
+            <Button
                 title="Consultas Paciente"
                 onPress={() => navigation.navigate('HomePaciente')}
             />
-            <Btn
-                title="Selecionar Clínica"
+            <Button
+                title="Clínica"
                 onPress={() => navigation.navigate('Clinica')}
             />
-            <Btn
-                title="Selecionar Médico"
+            <Button
+                title="Médico"
                 onPress={() => navigation.navigate('Medico')}
             />
-            <Btn
+            <Button
                 title="Calendário"
                 onPress={() => navigation.navigate('Calendario')}
             />
-            <Btn
-                title="Prescrição"
-                onPress={() => navigation.navigate('Prescricao')}
-            />
-            <Btn
+            <Button
                 title="Mapa"
                 onPress={() => navigation.navigate('Mapa')}
+            />
+            <Button
+                title="Prescrição"
+                onPress={() => navigation.navigate('Prescricao')}
             />
         </View>
     );

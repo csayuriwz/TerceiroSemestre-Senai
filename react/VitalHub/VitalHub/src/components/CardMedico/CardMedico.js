@@ -1,17 +1,21 @@
-import { BoxCard, ContainerConsultasShadow, DataUser, TextBox} from "../Container/Style"
-import { CardImage } from "../Image/Image";
+
+import { BoxCard, ContainerShadowConsultas, DataUser, TextBox} from "../Container/Style"
+import { ImageCard } from "../Image/Image";
 import {  TextGraySemiBold, TitleBlack } from "../Title/Style"
 
-export const CardDoctor = ({
+
+
+export const CardMedico = ({
     name,
     type,
     source
 
 }) => {
     return (
-        <ContainerConsultasShadow>
+        <ContainerShadowConsultas>
             <BoxCard>
-                <CardImage
+                <ImageCard
+                //require('../../../src/assets/img/ImageCard.png')
                     source={source}
                 />
                 <DataUser>
@@ -21,6 +25,6 @@ export const CardDoctor = ({
                     </TextBox>
                 </DataUser>
             </BoxCard>
-        </ContainerConsultasShadow>
+        </ContainerShadowConsultas>
     )
 }

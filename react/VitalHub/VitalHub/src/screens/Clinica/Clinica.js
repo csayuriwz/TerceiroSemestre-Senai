@@ -1,11 +1,11 @@
 import { ButtonTitle } from "../../components/Button/Style"
 import { ButtonModal, ButtonSecondary, ButtonSecondaryText } from "../../components/CancelattionModal/Style"
 import { CardClinic } from "../../components/CardClinic/CardClinic"
-import { ClinicaLis } from "../../components/CardClinic/Style"
+import { ListClinic } from "../../components/CardClinic/Style"
 import { TitleBlackBold } from "../../components/ConsultModal/Style"
-import { ClinicContent, ConatinerC } from "../../components/Container/Style"
+import { ClinicContent, ContainerClinica } from "../../components/Container/Style"
 
-export const SelectClinica = [
+export const SelecionarClinica = [
     {id: 1, nome: 'Clinica',                     
     name:'Clínica Natureh',
     rated:'4,5',
@@ -40,12 +40,12 @@ export const SelectClinica = [
 
 export const Clinica = () => {
     return (
-        <ConatinerC>
+        <ContainerClinica>
             <ClinicContent>
                 <TitleBlackBold>Selecionar clínica</TitleBlackBold>
-                <ClinicaLis
+                <ListClinic
                     //nome da constante com dados
-                    data={SelectClinica}
+                    data={SelecionarClinica}
                     //ldefinindo quem sera a key do seu item na constante
                     keyExtractor={(item) => item.id}
                     //O que vai ser mostrado
@@ -69,6 +69,6 @@ export const Clinica = () => {
                     <ButtonSecondaryText>Cancelar</ButtonSecondaryText>
                 </ButtonSecondary>
             </ClinicContent>
-        </ConatinerC>
+        </ContainerClinica>
     )
 }

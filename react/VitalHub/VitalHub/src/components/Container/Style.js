@@ -158,7 +158,7 @@ export const ContainerClinic = styled.SafeAreaView`
     justify-content: center;
     width: 100%;
 `
-export const ConatinerC = styled(ContainerClinic)`
+export const ContainerClinica = styled(ContainerClinic)`
     background-color: #FBFBFB;
     margin-top: 0px;
 `
