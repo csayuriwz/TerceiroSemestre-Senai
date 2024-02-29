@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { LinearGradient } from "expo-linear-gradient";
 
 
@@ -44,7 +44,7 @@ export const BoxUser = styled.SafeAreaView`
 export const BoxCard = styled.SafeAreaView`
     flex-direction: row;
     /* justify-content: start; */
-    margin-left: 40px;
+    /* margin-left: 40px; */
     align-items: center;
     gap: 15px;
     width: 100%;
@@ -90,7 +90,7 @@ export const ContainerShadow = styled.SafeAreaView`
     align-items: center;
     justify-content: center;
 `
-export const ContainerShadowConsultas = styled.SafeAreaView`
+export const ContainerShadowConsultas = styled.TouchableOpacity`
     background-color: #FBFBFB;
     width: 90%;
     height: 110px;
@@ -101,6 +101,14 @@ export const ContainerShadowConsultas = styled.SafeAreaView`
     border-radius: 5px;
     align-items: center;
     justify-content: center;
+    ${props => props.clickButton ?
+        css`
+     border: 2px solid #496BBA;
+    `
+        : css`
+   border-color: transparent;
+   
+    `}
 `
 export const ContainerInput = styled.SafeAreaView`
     width: 80%;
@@ -158,7 +166,7 @@ export const ContainerClinic = styled.SafeAreaView`
     justify-content: center;
     width: 100%;
 `
-export const ContainerClinica = styled(ContainerClinic)`
+export const ContainerC = styled(ContainerClinic)`
     background-color: #FBFBFB;
     margin-top: 0px;
 `

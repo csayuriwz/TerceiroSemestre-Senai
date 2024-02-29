@@ -8,11 +8,13 @@ import {  TextGraySemiBold, TitleBlack } from "../Title/Style"
 export const CardMedico = ({
     name,
     type,
-    source
+    source,
+    onPress,
+    clickButton
 
 }) => {
     return (
-        <ContainerShadowConsultas>
+        <ContainerShadowConsultas clickButton={clickButton} onPress={onPress}>
             <BoxCard>
                 <ImageCard
                 //require('../../../src/assets/img/ImageCard.png')

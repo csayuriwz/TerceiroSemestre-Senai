@@ -5,17 +5,19 @@ import CalendarComponent from "../../components/CalendarComponent/CalendarCompon
 import { ButtonModal, ButtonSecondary, ButtonSecondaryText } from "../../components/CancelattionModal/Style"
 import { TitleBlackDoctor } from "../../components/CardMedico/Style"
 import { ModalSubtitle2 } from "../../components/ConsultModal/Style"
-import { ClinicContent, ContainerClinica, InputContent } from "../../components/Container/Style"
+import { ClinicContent, ContainerC, InputContent } from "../../components/Container/Style"
 import InputSelect from "../../components/InputSelect/InputSelect"
 
 export const CalendarioPaciente = () => {
     const [showModalAppointment, setShowModalAppointment] = useState(false)
     return(
-        <ContainerClinica>
+        <ContainerC>
         <ClinicContent>
             <TitleBlackDoctor>Selecionar data</TitleBlackDoctor>
 
-            <CalendarComponent/>
+            <CalendarComponent
+                
+            />
             <InputContent>
             <ModalSubtitle2>Selecione um horário disponível</ModalSubtitle2>
             <InputSelect/>
@@ -36,6 +38,6 @@ export const CalendarioPaciente = () => {
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
         />
-    </ContainerClinica>
+    </ContainerC>
     )
 }

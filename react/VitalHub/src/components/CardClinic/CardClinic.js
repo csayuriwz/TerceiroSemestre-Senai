@@ -8,12 +8,13 @@ export const CardClinic = ({
     name,
     rated,
     time,
-    border,
-    city
+    city,
+    onPress,
+    clickButton
 
 }) => {
     return (
-        <ContainerShadowClinic border={border}>
+        <ContainerShadowClinic onPress={onPress} clickButton={clickButton}>
             <BoxCard>
                     <TextBox>
                         <TitleBlack>{name}</TitleBlack>

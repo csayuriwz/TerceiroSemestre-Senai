@@ -60,7 +60,7 @@ export const BoxCard = styled.SafeAreaView`
     width: 100%;
 `
 export const ContainerShadowClinic = styled(ContainerShadowConsultas)`
-    border: 2px solid ${(props) => `${props.border}`};
+    
 `
 
 export const ListClinic = styled(FlatList)`
