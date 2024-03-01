@@ -1,34 +1,37 @@
-import { ButtonCadastro, ButtonTitle } from "../../components/Button/Style"
-import { Container } from "../../components/Container/Style"
-import { Input } from "../../components/Input/Style"
-import { LinkCancel } from "../../components/LinkMedium/Style"
-import { Logo } from "../../components/Logo/Style"
-import { SubtitleCadastro, Title } from "../../components/Title/Style"
+import { BtnCadastro, BtnTitle } from '../../components/Button/Style'
+import { Container } from '../../components/Container/Style'
+import { LinkCancel } from '../../components/Link/Style'
+import { Logo } from '../../components/Logo/Style'
+import { Subtitle, Title } from '../../components/Title/Style'
 
-export const Cadastro = ({navigation}) => {
-    return(
+export const Cadastro = ({ navigation }) => {
+    return (
         <Container>
             <Logo
-        source={require('../../../src/assets/img/VitalHub_Logo.png')}
-        />
-        <Title>Criar Conta</Title>
-        <SubtitleCadastro>Insira seu endereço de e-mail e senha para realizar seu cadastro.</SubtitleCadastro>
+                source={require('../../../src/assets/img/VitalHub_Logo.png')}
+            />
 
-        <Input
-         placeholder={'Usuário ou E-mail'}
-         />
-        <Input
-         placeholder={'Senha'}
-         />
-        <Input
-         placeholder={'Confirmar senha'}
-         />
+            <Title>Criar conta</Title>
 
-         <ButtonCadastro>
-            <ButtonTitle>Continuar</ButtonTitle>
-         </ButtonCadastro>
+            <Subtitle>Insira seu endereço de e-mail e senha para realizar seu cadastro.</Subtitle>
 
-         <LinkCancel onPress={() => navigation.navigate('Login')}>Cancelar</LinkCancel>
+
+            <Input
+                placeholder={'Usuário ou E-mail'}
+            />
+            <Input
+                placeholder={'Senha'}
+            />
+            <Input
+                placeholder={'Confirmar senha'}
+            />
+
+            <BtnCadastro>
+                <BtnTitle>Confirmar</BtnTitle>
+            </BtnCadastro>
+
+            <LinkCancel onPress={() => navigation.navigate('Login')}>Cancelar</LinkCancel>
+
         </Container>
     )
 }

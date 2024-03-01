@@ -1,7 +1,5 @@
-
 import { BoxInput } from "../../components/BoxInput/Index"
-import { ContainerLabel, ContainerPerfil, ContainerShadow } from "../../components/Container/Style"
-import { ImagePerfil } from "../../components/Image/Image"
+import { ContainerLabel, ContainerLevantado, ContainerP, ContainerPerfil, ContainerShadow } from "../../components/Container/Style"
 import { Subtitle, TitleBlack } from "../../components/Title/Style"
 import { ScrollForm } from "../../components/ScrollForm/Style"
 import { ButtonGray, ButtonPerfil, ButtonTitle } from "../../components/Button/Style"
@@ -9,17 +7,17 @@ import { ButtonGray, ButtonPerfil, ButtonTitle } from "../../components/Button/S
 export const Perfil = () => {
     return (
        <ScrollForm>
-        <ContainerPerfil>
-            <ImagePerfil
+        <ContainerP>
+            <ProfilePic
                 source={require('../../../src/assets/img/ImagePerfil.png')}
                 resizeMode='cover'
             >
 
-                <ContainerShadow>
+                <ContainerLevantado>
                     <TitleBlack>Richard Kosta</TitleBlack>
                     <Subtitle>richard.kosta@gmail.com</Subtitle>
-                </ContainerShadow>
-            </ImagePerfil>
+                </ContainerLevantado>
+            </ProfilePic>
 
             <BoxInput
                 textLabel='Data de Nascimento'
@@ -75,7 +73,7 @@ export const Perfil = () => {
             <ButtonGray>
                 <ButtonTitle>Sair do app</ButtonTitle>
             </ButtonGray>
-        </ContainerPerfil>
+        </ContainerP>
         </ScrollForm> 
     )
 }

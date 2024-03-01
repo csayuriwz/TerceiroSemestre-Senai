@@ -1,7 +1,7 @@
-import { Button, ButtonTitle } from "../../components/Button/Style"
+import { Btn, BtnTitle } from "../../components/Button/Style"
 import { Container } from "../../components/Container/Style"
 import { Input } from "../../components/Input/Style"
-import { LinkCancel, LinkMedium } from "../../components/LinkMedium/Style"
+import { LinkCancel } from "../../components/LinkMedium/Style"
 import { Logo } from "../../components/Logo/Style"
 import { Subtitle, Title } from "../../components/Title/Style"
 
@@ -18,9 +18,9 @@ export const EsqueceuSenha = ({navigation}) => {
          placeholder={'Usuário ou E-mail'}
          />
 
-         <Button>
-            <ButtonTitle>Continuar</ButtonTitle>
-         </Button>
+         <Btn>
+            <BtnTitle>Continuar</BtnTitle>
+         </Btn>
 
          <LinkCancel onPress={() => navigation.navigate('Login')}>Cancelar</LinkCancel>
 

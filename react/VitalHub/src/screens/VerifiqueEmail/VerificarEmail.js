@@ -1,9 +1,9 @@
-import { Button, ButtonTitle } from "../../components/Button/Style"
+import { BtnCadastro, Button, ButtonTitle } from "../../components/Button/Style"
 import { Container, ContainerInput } from "../../components/Container/Style"
 import { InputCode } from "../../components/Input/Style"
-import { LinkCancel, LinkCode, LinkMedium } from "../../components/LinkMedium/Style"
+import { LinkCode } from "../../components/Link/Style"
 import { Logo } from "../../components/Logo/Style"
-import { Subtitle, SubtitleBlue, Title } from "../../components/Title/Style"
+import { Subtitle, SubtitleLink, Title } from "../../components/Title/Style"
 
 export const VerifiqueEmail = () => {
     return(
@@ -15,7 +15,7 @@ export const VerifiqueEmail = () => {
             <Title>Verifique seu e-mail</Title>
 
             <Subtitle>Digite o código de 4 dígitos enviado para o e-mail</Subtitle>
-            <SubtitleBlue>username@email.com</SubtitleBlue>
+            <SubtitleLink>username@email.com</SubtitleLink>
             
             <ContainerInput>
                 <InputCode
@@ -32,9 +32,9 @@ export const VerifiqueEmail = () => {
                 />
             </ContainerInput>
 
-            <Button>
-                <ButtonTitle>entrar</ButtonTitle>
-            </Button>
+            <BtnCadastro>
+                <BtnTitle>entrar</BtnTitle>
+            </BtnCadastro>
 
             <LinkCode>Reenviar código</LinkCode>
 

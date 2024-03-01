@@ -1,14 +1,13 @@
-import { Text, Image } from "react-native"
 import { Container } from "../../components/Container/Style"
 import { Logo } from "../../components/Logo/Style"
 import { Title } from "../../components/Title/Style"
 import { Input } from "../../components/Input/Style"
-import { Button, ButtonTitle, ButtonGoogle, ButtonGoogleTitle } from "../../components/Button/Style"
-import { LinkMedium, LinkMediumBlue } from "../../components/LinkMedium/Style"
+import { BtnGoogle, BtnGoogleTitle, Btn, BtnGoogle, BtnGoogleTitle, BtnTitle } from "../../components/Button/Style"
+import { Link } from "../../components/LinkMedium/Style"
 import { ContentAccount } from "../../components/ContentAccount/Style"
 import { TextAccount } from "../../components/TextAccount/Style"
-
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons'
+import { LinkBlue } from "../../components/Link/Style"
 
 export const Login = ({navigation}) => {
     return(
@@ -28,22 +27,22 @@ export const Login = ({navigation}) => {
                 placeholder={'Senha'}
             />
 
-            <LinkMedium onPress={() => navigation.navigate('EsqueceuSenha')}>Esqueceu sua senha?</LinkMedium>
+            <Link onPress={() => navigation.navigate('EsqueceuSenha')}>Esqueceu sua senha?</Link>
 
-            <Button>
-                <ButtonTitle>entrar</ButtonTitle>
-            </Button>
+            <Btn>
+                <BtnTitle>entrar</BtnTitle>
+            </Btn>
 
-            <ButtonGoogle>
+            <BtnGoogle>
                 <AntDesign
                 name="google"   
                 size={20} color='#496BBA'
                 />
-                <ButtonGoogleTitle>entrar com Google</ButtonGoogleTitle>
-            </ButtonGoogle>
+                <BtnGoogleTitle>entrar com Google</BtnGoogleTitle>
+            </BtnGoogle>
             
             <ContentAccount>
-                <TextAccount>Não tem conta? <LinkMediumBlue onPress={() => navigation.navigate('Cadastro')}>Crie uma conta agora!</LinkMediumBlue></TextAccount>
+                <TextAccount>Não tem conta? <LinkBlue onPress={() => navigation.navigate('Cadastro')}>Crie uma conta agora!</LinkBlue></TextAccount>
             </ContentAccount>
 
         </Container>

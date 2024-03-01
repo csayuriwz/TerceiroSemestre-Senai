@@ -13,6 +13,11 @@ export const Input = styled.TextInput.attrs({
     padding-left: 16px;
     color: white;
 `
+
+export const InputSenha = styled(Input)`
+    margin-bottom: 12px;
+`
+
 export const InputCode = styled.TextInput.attrs({
     placeholderTextColor: '#ffff',
     placeholder: '0'
@@ -28,40 +33,3 @@ export const InputCode = styled.TextInput.attrs({
     color: white;
     text-align:center;
 `
-export const InputSenha = styled(Input)`
-    margin-bottom: 12px;
-`
-
-export const InputPerfil = styled.TextInput.attrs({
-    placeholderTextColor: '#33303E',
-
-})`
-    font-family: 'MontserratAlternates_500Medium';
-    width: ${(props) => `${props.customWidth}%`};
-    height: ${(props) => `${props.customHeight}px`};
-    /* border: 1px solid #ffff ; */
-    border-radius: 5px;
-    padding-left: 16px;
-    background-color:#F5F3F3;
-    margin-bottom: 24px;
-    padding-top: ${(props) => `${props.customP}px`}; 
-    
-    
-
-`
-export const InputProntuario = styled.TextInput.attrs({
-    placeholderTextColor: '#34898F'
-})`
-    width: ${(props) => `${props.customWidth}%`};
-    height: ${(props) => `${props.customHeight}px`};
-    border: 2px solid #49B3BA;
-    border-radius: 5px;
-    font-family: 'MontserratAlternates_600SemiBold';
-    font-size: 14px;
-    margin-bottom: 15px;
-    padding-left: 16px;
-    color: #4E4B59;
-    padding-bottom: ${(props) => `${props.customP}`}; 
-`
-
-

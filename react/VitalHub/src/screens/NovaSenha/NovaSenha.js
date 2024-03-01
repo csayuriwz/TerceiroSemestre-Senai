@@ -1,4 +1,4 @@
-import { Button, ButtonTitle } from "../../components/Button/Style"
+import { Btn, Button, ButtonTitle } from "../../components/Button/Style"
 import { Container } from "../../components/Container/Style"
 import { InputSenha } from "../../components/Input/Style"
 import { Logo } from "../../components/Logo/Style"
@@ -21,9 +21,9 @@ export const NovaSenha = () => {
                 placeholder='Confirmar nova senha'
             />
 
-            <Button>
-                <ButtonTitle>confirmar nova senha</ButtonTitle>
-            </Button>
+            <Btn>
+                <BtnTitle>confirmar nova senha</BtnTitle>
+            </Btn>
         </Container>
     )
 }
