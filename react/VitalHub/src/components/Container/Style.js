@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { LinearGradient } from "expo-linear-gradient";
 
 export const Container = styled.SafeAreaView`

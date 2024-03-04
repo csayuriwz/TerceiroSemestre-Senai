@@ -1,3 +1,5 @@
+import { InputP } from "../Input/Index"
+import { Input } from "../Input/Style"
 import { Label } from "../Label/Index"
 import { FieldContent, FieldContent2 } from "./Style"
 

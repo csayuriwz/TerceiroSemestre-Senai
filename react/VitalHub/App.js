@@ -95,12 +95,12 @@ export default function App() {
               options={{ title: "Prontuário" }}
             />
             <Stack.Screen
-              name='Consultas Medico'
+              name='ConsultasMedico'
               component={ConsultasMedico}
-              options={{ title: "Consultas" }}
+              options={{ title: "Consultas Medico" }}
             />
             <Stack.Screen
-              name='HomePaciente'
+              name='ConsultasPaciente'
               component={PacienteConsulta}
               options={{ title: "Consultas Paciente" }}
             />

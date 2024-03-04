@@ -3,6 +3,7 @@ import { BtnModal, BtnSub, BtnSubText, ModalContent, ModalSubtitle, PatientModal
 import { ContainerBtn } from "../../Container/Style"
 import { InputP } from "../../Input/Index"
 import { BtnTitle } from "../../Button/Style"
+import { BtnAgendar } from "../../Button/BtnCadastro/BtnCadastro"
 
 
 export const ModalConsulta = ({

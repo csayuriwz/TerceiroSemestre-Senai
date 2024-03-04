@@ -1,4 +1,4 @@
-import { BtnConsultType, BtnTextConsultType} from "./Style"
+import { BtnCadText, BtnCadastroS, BtnConsultType, BtnTextConsultType} from "./Style"
 
 
 export const BtnCadastro = ({

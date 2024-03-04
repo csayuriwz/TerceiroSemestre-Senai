@@ -1,6 +1,6 @@
 import { Modal } from "react-native"
 import { ModalContent, ModalText, PatientModal, BtnSub, BtnSubText } from "./Style"
-import { BtnTitle } from "../../Button/Style"
+import { BtnModal, BtnTitle } from "../../Button/Style"
 import { TitleBlack } from "../../Title/Style"
 
 export const ModalCancel = ({

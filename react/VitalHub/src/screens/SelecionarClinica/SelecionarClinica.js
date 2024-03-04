@@ -3,8 +3,8 @@ import { ClinicContent, ContainerC } from "../../components/Container/Style"
 import { TitleBlack } from "../../components/Title/Style"
 import { CardClinic } from "../../components/Cards/CardClinica/CardClinica"
 import { ListClinic } from "../../components/Cards/CardClinica/Style"
-import { BtnModal, BtnSub, BtnSubText } from "../../components/Modals/ModalCancel/Style"
-import { BtnTitle } from "../../components/Button/Style"
+import { BtnSub, BtnSubText } from "../../components/Modals/ModalCancel/Style"
+import { BtnModal, BtnTitle } from "../../components/Button/Style"
 
 export const Clinica = () => {
     const SelecionarClinica = [
@@ -47,14 +47,13 @@ export const Clinica = () => {
             <ClinicContent>
                 <TitleBlack>Selecionar clínica</TitleBlack>
                 <ListClinic
-                    //nome da constante com dados
+                
                     data={SelecionarClinica}
-                    //ldefinindo quem sera a key do seu item na constante
                     keyExtractor={(item) => item.id}
-                    //O que vai ser mostrado
                     renderItem={({item}) =>
                          (
                         <CardClinic
+
                             clickButton={item.id == borderColor}
                             onPress={() => setBorderColor(item.id)}
                             name={item.name}

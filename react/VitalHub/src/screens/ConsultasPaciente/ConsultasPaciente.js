@@ -1,12 +1,13 @@
-import { CalendarList } from 'react-native-calendars'
-import { ContainerBtn, ContainerConsulta, ContainerMedico } from '../../components/Container/Style'
 import { HeaderPaciente } from '../../components/Header/HeaderPaciente/HeaderPaciente'
-import { BtnCadastro } from '../../components/Button/BtnCadastro/BtnCadastro'
 import { ListComponent } from '../../components/Lista/Lista'
 import { CardPaciente } from '../../components/Cards/CardPaciente/CardPaciente'
 import { ModalConsulta } from '../../components/Modals/ModalConsulta/ModalConsulta'
 import { CardModalPaciente } from '../../components/Modals/ModalCard/ModalCard'
-
+import { useState } from 'react'
+import { BtnCadastro, BtnMedical } from '../../components/Button/Style'
+import { FontAwesome6 } from '@expo/vector-icons';
+import CalendarList from "../../components/Calendario/Index";
+import { ContainerBtn, ContainerConsulta } from '../../components/Container/Style'
 
 const ConsultasPaciente = [
     {id: 1, nome: 'Richard', situacao: "pendente"},
@@ -15,15 +16,11 @@ const ConsultasPaciente = [
 ]
 
 export const PacienteConsulta = () => {
+
     const [showModalAppointment, setShowModalAppointment] = useState(false)
-
     const [showModalConsult, setShowModalConsult] = useState(false)
-
     const [statusListaPaciente, setStatusListaPaciente] = useState("pendente")
-
     const [statusModal, setStatusModal] = useState("")
-
-    
 
     return(
         <ContainerConsulta>
@@ -31,7 +28,7 @@ export const PacienteConsulta = () => {
             <HeaderPaciente />
 
             {/* Calendário */}
-            <CalendarList/>
+            <CalendarList />
 
             {/* Botões */}
             <ContainerBtn>
@@ -56,11 +53,8 @@ export const PacienteConsulta = () => {
 
             {/* FlatList */}
             <ListComponent
-            //nome da constante com dados
             data={ConsultasPaciente}
-            //ldefinindo quem sera a key do seu item na constante
             keyExtractor={(item) => item.id}
-            //O que vai ser mostrado
             renderItem={({item}) => 
                 statusListaPaciente == item.situacao && (
                     <CardPaciente
@@ -74,12 +68,6 @@ export const PacienteConsulta = () => {
                     />
                 )}
             />
-
-            <ContainerMedico>
-                <BtnMedico onPress={() => setShowModalConsult(true)}>
-                    <FontAwesome6 name="stethoscope" size={28} color="#FBFBFB" /> 
-                </BtnMedico>
-            </ContainerMedico>
 
             <ModalConsulta
                 visible={showModalConsult}

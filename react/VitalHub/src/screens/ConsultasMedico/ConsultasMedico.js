@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { CalendarList } from "react-native-calendars";
-import { ContainerBtnSub } from "../../components/Container/Style";
+import { ContainerBtnSub, ContainerConsulta } from "../../components/Container/Style";
 import { BtnCadastro } from "../../components/Button/Style";
 import { CardPaciente } from "../../components/Cards/CardPaciente/CardPaciente";
 import { ModalCancel } from "../../components/Modals/ModalCancel/ModalCancel";
 import { ModalCard } from "../../components/Modals/ModalCard/ModalCard";
 import { Footer } from "../../components/Footer/Footer";
+import { ListComponent } from "../../components/Lista/Lista";
+import { Header } from "../../components/Header/Header";
+import CalendarList from "../../components/Calendario/Index";
 
 const Consultas = [
     { id: 1, nome: 'Carlos', situacao: "pendente" },
@@ -26,7 +28,7 @@ export const ConsultasMedico = () => {
     const [showModalAppointment, setShowModalAppointment] = useState(false)
 
     return (
-        <ContainerConsultas>
+        <ContainerConsulta>
             <Header />
 
             <CalendarList />
@@ -91,6 +93,6 @@ export const ConsultasMedico = () => {
             />
 
             <Footer />
-        </ContainerConsultas>
+        </ContainerConsulta>
     )
 }

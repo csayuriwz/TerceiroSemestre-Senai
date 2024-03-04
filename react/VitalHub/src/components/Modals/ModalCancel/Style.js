@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Btn } from "../../Button/Style";
 
-
 export const PatientModal = styled.View`
     flex: 1;
     align-items: center;
@@ -27,10 +26,6 @@ export const ModalText = styled.Text`
     font-family: Quicksand_500Medium;
 `
 
-export const BtnModal = styled(Btn)`
-    width: 80%;
-    margin-top: 30px;
-`
 export const BtnSub = styled(Btn)`
     background-color: transparent;
     border: none;
@@ -44,6 +39,5 @@ export const BtnSubText = styled.Text`
     text-decoration: underline;
     text-decoration-color: #496BBA;
     align-self: center;
-    /* margin-top: 16px; */
 `
 

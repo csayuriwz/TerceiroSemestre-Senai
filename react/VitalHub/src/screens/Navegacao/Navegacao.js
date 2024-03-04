@@ -34,7 +34,7 @@ export const Navegacao = ({navigation}) => {
             />
             <Button
                 title="Clínica"
-                onPress={() => navigation.navigate('SelecionarClinica')}
+                onPress={() => navigation.navigate('Clinica')}
             />
             <Button
                 title="Médico"

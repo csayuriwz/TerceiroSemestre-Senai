@@ -1,4 +1,4 @@
-import { ContainerP } from "../../components/Container/Style"
+import { ContainerP, ContainerSub } from "../../components/Container/Style"
 import { ProfilePicSub } from "../../components/Image/Style"
 import { InputBox } from "../../components/InputBox/Index"
 import { TextGray, TitleSub } from "../../components/Title/Style"
