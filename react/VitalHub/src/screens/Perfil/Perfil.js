@@ -1,8 +1,9 @@
-import { BoxInput } from "../../components/BoxInput/Index"
-import { ContainerLabel, ContainerLevantado, ContainerP, ContainerPerfil, ContainerShadow } from "../../components/Container/Style"
+import { ContainerLabel, ContainerLevantado, ContainerP} from "../../components/Container/Style"
 import { Subtitle, TitleBlack } from "../../components/Title/Style"
 import { ScrollForm } from "../../components/ScrollForm/Style"
-import { ButtonGray, ButtonPerfil, ButtonTitle } from "../../components/Button/Style"
+import { BtnCinza, BtnPerfil, BtnTitle,} from "../../components/Button/Style"
+import { ProfilePic } from "../../components/Image/Style"
+import { InputBox } from "../../components/InputBox/Index"
 
 export const Perfil = () => {
     return (
@@ -19,7 +20,7 @@ export const Perfil = () => {
                 </ContainerLevantado>
             </ProfilePic>
 
-            <BoxInput
+            <InputBox
                 textLabel='Data de Nascimento'
                 placeholder='04/05/1999'
                 keyboardType='numeric'
@@ -27,7 +28,7 @@ export const Perfil = () => {
                 editable={true}
                 fieldWidth={80}
             />
-            <BoxInput
+            <InputBox
                 textLabel='CPF'
                 placeholder='859********'
                 keyboardType='numeric'
@@ -35,7 +36,7 @@ export const Perfil = () => {
                 editable={true}
                 fieldWidth={80}
             />
-            <BoxInput
+            <InputBox
                 textLabel='Endereço'
                 placeholder='Rua Vicenso Silva, 987'
                 keyboardType='default'
@@ -46,7 +47,7 @@ export const Perfil = () => {
 
             <ContainerLabel>
 
-            <BoxInput
+            <InputBox
                 textLabel='Cep'
                 placeholder='06548-909'
                 keyboardType='numeric'
@@ -54,7 +55,7 @@ export const Perfil = () => {
                 editable={true}
                 fieldWidth={45}
             />
-            <BoxInput
+            <InputBox
                 textLabel='Cidade'
                 placeholder='Moema-SP'
                 keyboardType='default'
@@ -64,15 +65,15 @@ export const Perfil = () => {
             />
             </ContainerLabel>
 
-            <ButtonPerfil>
-                <ButtonTitle>SALVAR</ButtonTitle>
-            </ButtonPerfil>
-            <ButtonPerfil>
-                <ButtonTitle>EDITAR</ButtonTitle>
-            </ButtonPerfil>
-            <ButtonGray>
-                <ButtonTitle>Sair do app</ButtonTitle>
-            </ButtonGray>
+            <BtnPerfil>
+                <BtnTitle>SALVAR</BtnTitle>
+            </BtnPerfil>
+            <BtnPerfil>
+                <BtnTitle>EDITAR</BtnTitle>
+            </BtnPerfil>
+            <BtnCinza>
+                <BtnTitle>Sair do app</BtnTitle>
+            </BtnCinza>
         </ContainerP>
         </ScrollForm> 
     )

@@ -1,4 +1,4 @@
-import { InputDiagnostico, InputPerfil, InputProntuario } from "./Style"
+import { InputPerfil, InputProntuario } from "./Style"
 
 export const Input = ({
     customHeight,

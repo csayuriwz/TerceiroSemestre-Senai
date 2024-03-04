@@ -20,6 +20,9 @@ export const BtnTitle = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
     font-size: 14px;
 `
+export const BtnMedical = styled.TouchableOpacity`
+    
+`
 
 export const BtnGoogle = styled(Btn)`
     flex-direction: row;
@@ -29,8 +32,44 @@ export const BtnGoogle = styled(Btn)`
     border-color: #ffff;
     justify-content: center;
 `
+export const BtnModal = styled(Btn)`
+    width: 80%;
+    margin-top: 30px;
+`
 
-export const BtnGoogleTitle = styled(ButtonTitle)`
+export const BtnGoogleTitle = styled(BtnTitle)`
     color: #496BBA;
     margin-left: 29px;
+`
+
+export const BtnPerfil = styled(Btn)`
+    width: 80%;
+    margin-bottom: 10px;
+`
+
+export const BtnCinza = styled(Btn)`
+    width: 50%;
+    background-color: #ACABB7;
+    border: solid 1px #ACABB7;
+`
+export const BtnCinzaSub = styled(Btn)`
+    width: 80%;
+    background-color: #ACABB7;
+    border: solid 1px #ACABB7;
+`
+
+export const BtnCamera = styled.TouchableOpacity`
+    height: 44px;
+    background-color: #49B3BA;
+    align-items: center;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+`
+
+export const BtnCameraText = styled(BtnTitle)`
+    color: #FFFFFF;
 `

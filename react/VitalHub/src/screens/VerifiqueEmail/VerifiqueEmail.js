@@ -1,4 +1,4 @@
-import { BtnCadastro, Button, ButtonTitle } from "../../components/Button/Style"
+import { BtnCadastro, BtnTitle, Button, ButtonTitle } from "../../components/Button/Style"
 import { Container, ContainerInput } from "../../components/Container/Style"
 import { InputCode } from "../../components/Input/Style"
 import { LinkCode } from "../../components/Link/Style"
@@ -37,8 +37,6 @@ export const VerifiqueEmail = () => {
             </BtnCadastro>
 
             <LinkCode>Reenviar código</LinkCode>
-
-
 
         </Container>
     )

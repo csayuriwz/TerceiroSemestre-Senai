@@ -3,6 +3,7 @@ import { Container } from '../../components/Container/Style'
 import { LinkCancel } from '../../components/Link/Style'
 import { Logo } from '../../components/Logo/Style'
 import { Subtitle, Title } from '../../components/Title/Style'
+import { Input } from "../../components/Input/Style"
 
 export const Cadastro = ({ navigation }) => {
     return (

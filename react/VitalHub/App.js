@@ -13,13 +13,13 @@ import { NovaSenha } from './src/screens/NovaSenha/NovaSenha';
 import { Cadastro } from './src/screens/Cadastro/Cadastro';
 import { Perfil } from './src/screens/Perfil/Perfil';
 import { Prontuario } from './src/screens/Prontuario/Prontuario';
-import { MedicosConsulta } from './src/screens/MedicosConsulta/MedicosConsulta';
-import { PacienteConsulta } from './src/screens/PacienteConsulta/PacienteConsulta';
-import { Clinica } from './src/screens/Clinica/Clinica';
 import { SelecionarMedico } from './src/screens/SelecionarMedico/SelecionarMedico';
-import { CalendarioPaciente } from './src/screens/CalendarioPaciente/CalendarioPaciente';
+import { CalendarioPaciente } from './src/screens/Calendario/Calendario';
 import { Mapa } from './src/screens/Mapa/Mapa';
 import { Prescricao } from './src/screens/Prescricao/Prescricao';
+import { ConsultasMedico } from './src/screens/ConsultasMedico/ConsultasMedico';
+import { Clinica } from './src/screens/SelecionarClinica/SelecionarClinica';
+import { PacienteConsulta } from './src/screens/ConsultasPaciente/ConsultasPaciente';
 
 
 const Stack = createNativeStackNavigator()
@@ -95,8 +95,8 @@ export default function App() {
               options={{ title: "Prontuário" }}
             />
             <Stack.Screen
-              name='Home'
-              component={MedicosConsulta}
+              name='Consultas Medico'
+              component={ConsultasMedico}
               options={{ title: "Consultas" }}
             />
             <Stack.Screen

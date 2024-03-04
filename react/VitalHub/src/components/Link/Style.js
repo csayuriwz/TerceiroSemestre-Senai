@@ -15,6 +15,7 @@ export const Link = styled.Text`
 export const LinkCancel = styled(Link)`
 align-self: center;
 margin-top: 24px;
+
 `
 
 export const LinkCode = styled(LinkCancel)`
@@ -22,7 +23,7 @@ align-self: center;
 margin-left: 0px;
 `
 
-export const LinkBlue = styled(LinkMedium)`
+export const LinkBlue = styled(Link)`
     color: #496BBA;
     text-decoration-color: #496BBA;
     align-self: center;

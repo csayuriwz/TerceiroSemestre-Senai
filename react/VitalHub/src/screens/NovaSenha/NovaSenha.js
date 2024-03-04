@@ -1,4 +1,4 @@
-import { Btn, Button, ButtonTitle } from "../../components/Button/Style"
+import { Btn, BtnTitle, Button, ButtonTitle } from "../../components/Button/Style"
 import { Container } from "../../components/Container/Style"
 import { InputSenha } from "../../components/Input/Style"
 import { Logo } from "../../components/Logo/Style"

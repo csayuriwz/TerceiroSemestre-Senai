@@ -2,12 +2,11 @@ import { Container } from "../../components/Container/Style"
 import { Logo } from "../../components/Logo/Style"
 import { Title } from "../../components/Title/Style"
 import { Input } from "../../components/Input/Style"
-import { BtnGoogle, BtnGoogleTitle, Btn, BtnGoogle, BtnGoogleTitle, BtnTitle } from "../../components/Button/Style"
-import { Link } from "../../components/LinkMedium/Style"
+import { BtnGoogleTitle, Btn, BtnGoogle, BtnTitle } from "../../components/Button/Style"
 import { ContentAccount } from "../../components/ContentAccount/Style"
 import { TextAccount } from "../../components/TextAccount/Style"
 import { AntDesign } from '@expo/vector-icons'
-import { LinkBlue } from "../../components/Link/Style"
+import { Link, LinkBlue } from "../../components/Link/Style"
 
 export const Login = ({navigation}) => {
     return(

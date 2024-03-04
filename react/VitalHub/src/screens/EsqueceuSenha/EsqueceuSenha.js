@@ -1,7 +1,7 @@
 import { Btn, BtnTitle } from "../../components/Button/Style"
 import { Container } from "../../components/Container/Style"
 import { Input } from "../../components/Input/Style"
-import { LinkCancel } from "../../components/LinkMedium/Style"
+import { LinkCancel } from "../../components/Link/Style"
 import { Logo } from "../../components/Logo/Style"
 import { Subtitle, Title } from "../../components/Title/Style"
 
