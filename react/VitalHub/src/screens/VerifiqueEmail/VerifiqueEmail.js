@@ -5,7 +5,7 @@ import { LinkCode } from "../../components/Link/Style"
 import { Logo } from "../../components/Logo/Style"
 import { Subtitle, SubtitleLink, Title } from "../../components/Title/Style"
 
-export const VerifiqueEmail = () => {
+export const VerifiqueEmail = ({navigation}) => {
     return(
         <Container>
             <Logo
@@ -32,7 +32,7 @@ export const VerifiqueEmail = () => {
                 />
             </ContainerInput>
 
-            <BtnCadastro>
+            <BtnCadastro onPress={() => navigation.replace('NovaSenha')}>
                 <BtnTitle>entrar</BtnTitle>
             </BtnCadastro>
 

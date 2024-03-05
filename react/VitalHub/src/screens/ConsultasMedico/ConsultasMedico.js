@@ -93,7 +93,7 @@ export const ConsultasMedico = () => {
                 setShowModalAppointment={setShowModalAppointment}
             />
 
-            <Footer />
+            {/* <Footer /> */}
         </ContainerConsulta>
     )
 }

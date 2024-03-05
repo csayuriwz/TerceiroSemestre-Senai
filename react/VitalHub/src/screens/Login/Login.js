@@ -9,6 +9,11 @@ import { AntDesign } from '@expo/vector-icons'
 import { Link, LinkBlue } from "../../components/Link/Style"
 
 export const Login = ({navigation}) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
+
     return(
         <Container>
 
@@ -26,9 +31,9 @@ export const Login = ({navigation}) => {
                 placeholder={'Senha'}
             />
 
-            <Link onPress={() => navigation.navigate('EsqueceuSenha')}>Esqueceu sua senha?</Link>
+            <Link onPress={() => navigation.replace('EsqueceuSenha')}>Esqueceu sua senha?</Link>
 
-            <Btn>
+            <Btn onPress={(e) => Login()}>
                 <BtnTitle>entrar</BtnTitle>
             </Btn>
 
@@ -41,7 +46,7 @@ export const Login = ({navigation}) => {
             </BtnGoogle>
             
             <ContentAccount>
-                <TextAccount>Não tem conta? <LinkBlue onPress={() => navigation.navigate('Cadastro')}>Crie uma conta agora!</LinkBlue></TextAccount>
+                <TextAccount>Não tem conta? <LinkBlue onPress={() => navigation.replace('Cadastro')}>Crie uma conta agora!</LinkBlue></TextAccount>
             </ContentAccount>
 
         </Container>

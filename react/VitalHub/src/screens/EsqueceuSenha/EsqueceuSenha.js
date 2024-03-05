@@ -18,11 +18,11 @@ export const EsqueceuSenha = ({navigation}) => {
          placeholder={'Usuário ou E-mail'}
          />
 
-         <Btn>
+         <Btn onPress={() => navigation.replace('VerifiqueEmail')}>
             <BtnTitle>Continuar</BtnTitle>
          </Btn>
 
-         <LinkCancel onPress={() => navigation.navigate('Login')}>Cancelar</LinkCancel>
+         <LinkCancel onPress={() => navigation.replace('Login')}>Cancelar</LinkCancel>
 
     </Container>
     )

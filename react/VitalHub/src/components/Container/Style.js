@@ -2,10 +2,11 @@ import styled, { css } from "styled-components";
 import { LinearGradient } from "expo-linear-gradient";
 
 export const Container = styled.SafeAreaView`
-    flex: 1;
-    align-items: center;
-    background-color: #49B3BA;
+  flex: 1;
+  align-items: center;
+  background-color: #FBFBFB;
 `
+
 export const ContainerInput = styled.SafeAreaView`
     width: 80%;
     justify-content: space-between;
@@ -30,6 +31,12 @@ export const BoxUser = styled.SafeAreaView`
 export const DataUser = styled.View`
     gap: 10px;
 `
+
+export const PerfilCityInputsContainer = styled.View`
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+`;
 
 export const ContainerConsulta = styled.View`
     flex: 1;

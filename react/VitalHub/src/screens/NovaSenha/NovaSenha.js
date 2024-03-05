@@ -4,7 +4,7 @@ import { InputSenha } from "../../components/Input/Style"
 import { Logo } from "../../components/Logo/Style"
 import { Subtitle, Title } from "../../components/Title/Style"
 
-export const NovaSenha = () => {
+export const NovaSenha = ({navigation}) => {
     return(
         <Container>
             <Logo
@@ -21,7 +21,7 @@ export const NovaSenha = () => {
                 placeholder='Confirmar nova senha'
             />
 
-            <Btn>
+            <Btn onPress={() => navigation.replace('Login')}>
                 <BtnTitle>confirmar nova senha</BtnTitle>
             </Btn>
         </Container>

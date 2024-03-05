@@ -20,6 +20,7 @@ import { Prescricao } from './src/screens/Prescricao/Prescricao';
 import { ConsultasMedico } from './src/screens/ConsultasMedico/ConsultasMedico';
 import { Clinica } from './src/screens/SelecionarClinica/SelecionarClinica';
 import { PacienteConsulta } from './src/screens/ConsultasPaciente/ConsultasPaciente';
+import { Main } from './src/screens/Main/Main';
 
 
 const Stack = createNativeStackNavigator()
@@ -44,24 +45,29 @@ export default function App() {
   }
   
   return (
-    // Container = Envolve toda a estrutura para a navegação
-      // Navigator - componente para a navegação
-        //Screen - tela
-          //name: nome da tela
-          //component: componente que sera chamado
-          //options(title): título da tela
+    
         <NavigationContainer>
           <Stack.Navigator>
+
+
             <Stack.Screen
+              name= "Login"
+              component={Login}
+              options={{ title: "Login"}}
+            
+            />
+
+
+            {/* <Stack.Screen
               name='Navegacao'
               component={Navegacao}
               options={{ title: "Navegação" }}
-            />
+            /> */}
 
             <Stack.Screen
-              name='Login'
-              component={Login}
-              options={{ title: "Login" }}
+              name='Main'
+              component={Main}
+              options={{ title: "Main" }}
             />
             
             <Stack.Screen

@@ -1,11 +1,12 @@
-import { ContainerP, ContainerSub } from "../../components/Container/Style"
+import { ContainerP, ContainerSub, PerfilCityInputsContainer } from "../../components/Container/Style"
 import { ProfilePicSub } from "../../components/Image/Style"
+import { PerfilInput } from "../../components/Input/PerfilInput/Index"
 import { InputBox } from "../../components/InputBox/Index"
 import { TextGray, TitleSub } from "../../components/Title/Style"
 
 export const Mapa = () => {
     return (
-       
+
         <ContainerP>
             <ProfilePicSub
                 source={require('../../../src/assets/img/Mapa.png')}
@@ -15,37 +16,29 @@ export const Mapa = () => {
             <TitleSub>Clínica Natureh</TitleSub>
             <TextGray>São Paulo, SP</TextGray>
 
-            <InputBox
-                textLabel='Endereço'
-                placeholder='Rua Vicenso Silva, 987'
-                keyboardType='default'
-                maxLength={100}
-                editable={true}
-                fieldWidth={80}
+            <PerfilInput
+                inputLabel="Endereço"
+                inputPlaceholder="Rua Exemplo, 000"
+                containerWidth="90%"
             />
-            <ContainerSub>
+            <PerfilCityInputsContainer>
+                <PerfilInput
+                    inputLabel="Número"
+                    inputPlaceholder="000"
+                    containerWidth="40%"
+                    inputType={"numeric"}
 
+                />
+                <PerfilInput
+                    inputLabel="Bairro"
+                    inputPlaceholder="Bairro-Estado"
+                    containerWidth="40%"
+                />
 
-            <InputBox
-                textLabel='Cep'
-                placeholder='06548-909'
-                keyboardType='numeric'
-                maxLength={9}
-                editable={true}
-                fieldWidth={45}
-            />
-            <InputBox
-                textLabel='Cidade'
-                placeholder='Moema-SP'
-                keyboardType='default'
-                maxLength={20}
-                editable={true}
-                fieldWidth={45}
-            />
-            </ContainerSub>
+            </PerfilCityInputsContainer>
 
         </ContainerP>
-        
+
     )
 }
 
