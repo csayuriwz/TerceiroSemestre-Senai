@@ -8,6 +8,7 @@ import { BtnCadastro, BtnMedical } from '../../components/Button/Style'
 import { FontAwesome6 } from '@expo/vector-icons';
 import CalendarList from "../../components/Calendario/Index";
 import { ContainerBtn, ContainerConsulta } from '../../components/Container/Style'
+import { BtnCadastroM } from '../../components/Button/BtnCadastro/BtnCadastro'
 
 const ConsultasPaciente = [
     {id: 1, nome: 'Richard', situacao: "pendente"},
@@ -32,18 +33,18 @@ export const PacienteConsulta = () => {
 
             {/* Botões */}
             <ContainerBtn>
-                <BtnCadastro
+                <BtnCadastroM
                     textButton={"Agendadas"}
                     clickButton= {statusListaPaciente === "pendente"}
                     onPress={() => setStatusListaPaciente("pendente")}
                 />
-                <BtnCadastro
+                <BtnCadastroM
                     textButton={"Realizadas"}
                     clickButton= {statusListaPaciente === "realizado"}
                     onPress={() => setStatusListaPaciente("realizado")}
 
                 />
-                <BtnCadastro
+                <BtnCadastroM
                     textButton={"Canceladas"}
                     clickButton= {statusListaPaciente === "cancelado"}
                     onPress={() => setStatusListaPaciente("cancelado")}

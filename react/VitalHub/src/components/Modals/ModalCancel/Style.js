@@ -40,4 +40,7 @@ export const BtnSubText = styled.Text`
     text-decoration-color: #496BBA;
     align-self: center;
 `
-
+export const BtnModal = styled(Btn)`
+    width: 80%;
+    margin-top: 30px;
+`

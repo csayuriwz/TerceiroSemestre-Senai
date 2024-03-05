@@ -1,17 +1,17 @@
 import styled from "styled-components"
 
 export const Input = styled.TextInput.attrs({
-    placeholderTextColor: '#ffff'
+    placeholderTextColor: '#4E4B59'
 })`
     width: 90%;
     height: 53px;
-    border: 1px solid #ffff;
+    border: 1px solid #F5F3F3;
     border-radius: 5px;
     font-family: 'MontserratAlternates_600SemiBold';
     font-size: 14px;
     margin-top: 15px;
     padding-left: 16px;
-    color: white;
+   
 `
 
 export const InputSenha = styled(Input)`

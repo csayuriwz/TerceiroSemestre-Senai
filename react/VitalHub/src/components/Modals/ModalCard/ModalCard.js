@@ -1,5 +1,5 @@
 import { Modal } from "react-native"
-import { BtnCard, BtnCardSub, BtnModalCard, BtnModalCardClinic, BtnSubText, CardPacienteModal, ContainerModalText, ModalAge, ModalCardContainer, ModalCardContainerConsulta, ModalConsultContentText, ModalContentText, ModalEmail, ModalPic, TextModalCalendar } from "./Style"
+import { BtnCard, BtnCardSub, BtnModalCard, BtnModalCardClinic, BtnSubText, CardPacienteModal, ContainerModalText, ModalAge, ModalCardContainer, ModalCardContainerConsulta, ModalConsultContentText, ModalEmail, ModalPic, TextModalCalendar } from "./Style"
 import { TextBlack, TitleBlack } from "../../Title/Style"
 import { BtnTitle } from "../../Button/Style"
 import { InputLabelSub } from "../../Label/Style"
@@ -30,10 +30,10 @@ export const ModalCard = ({
                     <TitleBlack>Niccole Sarga</TitleBlack>
 
                     {/* Descrição */}
-                    <ModalContentText>
+                    <ContainerModalText>
                         <ModalAge>22 anos</ModalAge>
                         <ModalEmail>niccole.sarga@gmail.com</ModalEmail>
-                    </ModalContentText>
+                    </ContainerModalText>
 
                     {/* Botão */}
                     <BtnModalCard>

@@ -1,7 +1,7 @@
 import { BtnCadText, BtnCadastroS, BtnConsultType, BtnTextConsultType} from "./Style"
 
 
-export const BtnCadastro = ({
+export const BtnCadastroM = ({
     textButton,
     clickButton = false,
     onPress

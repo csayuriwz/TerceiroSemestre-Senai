@@ -8,6 +8,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { ListComponent } from "../../components/Lista/Lista";
 import { Header } from "../../components/Header/Header";
 import CalendarList from "../../components/Calendario/Index";
+import { BtnCadastroM } from "../../components/Button/BtnCadastro/BtnCadastro";
 
 const Consultas = [
     { id: 1, nome: 'Carlos', situacao: "pendente" },
@@ -36,18 +37,18 @@ export const ConsultasMedico = () => {
             {/* Botões */}
 
             <ContainerBtnSub>
-                <BtnCadastro
+                <BtnCadastroM
                     textButton={"Agendadas"}
                     clickButton={statusLista === "pendente"}
                     onPress={() => setStatusLista("pendente")}
                 />
-                <BtnCadastro
+                <BtnCadastroM
                     textButton={"Realizadas"}
                     clickButton={statusLista === "realizado"}
                     onPress={() => setStatusLista("realizado")}
 
                 />
-                <BtnCadastro
+                <BtnCadastroM
                     textButton={"Canceladas"}
                     clickButton={statusLista === "cancelado"}
                     onPress={() => setStatusLista("cancelado")}

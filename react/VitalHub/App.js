@@ -110,7 +110,7 @@ export default function App() {
               options={{ title: "Clínicas" }}
             />
             <Stack.Screen
-              name='Medico'
+              name='SelecionarMedico'
               component={SelecionarMedico}
               options={{ title: "Médico" }}
             />
