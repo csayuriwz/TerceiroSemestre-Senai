@@ -29,7 +29,7 @@ export const BtnGoogle = styled(Btn)`
     background-color: #ffff;
     margin-top: 24px;
     margin-bottom: 16px;
-    border-color: #ffff;
+    border-color: #496BBA;
     justify-content: center;
 `
 export const BtnModal = styled(Btn)`
@@ -73,3 +73,5 @@ export const BtnCamera = styled.TouchableOpacity`
 export const BtnCameraText = styled(BtnTitle)`
     color: #FFFFFF;
 `
+
+

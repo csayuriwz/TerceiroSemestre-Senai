@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 export const Input = styled.TextInput.attrs({
-    placeholderTextColor: '#4E4B59'
+    placeholderTextColor: '#34898F'
 })`
     width: 90%;
     height: 53px;
-    border: 1px solid #F5F3F3;
+    border: 1px solid #49B3BA;
     border-radius: 5px;
     font-family: 'MontserratAlternates_600SemiBold';
     font-size: 14px;
@@ -19,12 +19,12 @@ export const InputSenha = styled(Input)`
 `
 
 export const InputCode = styled.TextInput.attrs({
-    placeholderTextColor: '#ffff',
+    placeholderTextColor: '#34898F',
     placeholder: '0'
 })`
     width: 20%;
     height: 68px;
-    border: 1px solid #ffff;
+    border: 1px solid #77CACF;
     border-radius: 5px;
     font-family: 'Quicksand_600SemiBold';
     font-size: 45px;

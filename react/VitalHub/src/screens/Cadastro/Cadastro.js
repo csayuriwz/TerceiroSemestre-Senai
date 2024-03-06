@@ -9,7 +9,7 @@ export const Cadastro = ({ navigation }) => {
     return (
         <Container>
             <Logo
-                source={require('../../../src/assets/img/VitalHub_Logo.png')}
+                source={require('../../../src/assets/img/VitalHub_LogoAzul.png')}
             />
 
             <Title>Criar conta</Title>

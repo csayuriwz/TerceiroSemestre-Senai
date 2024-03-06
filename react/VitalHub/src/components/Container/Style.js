@@ -202,6 +202,8 @@ export const ContainerMedico = styled.View`
     border-radius: 7px;
 `
 
+
+
 export const ContainerShadow = styled.View`
     flex-direction: row;
     padding-left: 80px;

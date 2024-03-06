@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Link = styled.Text`
-    color: white;
+    color: #8C8A97;
     font-family: 'MontserratAlternates_600SemiBold';
     font-size: 14px;
     text-decoration: underline;

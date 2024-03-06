@@ -7,13 +7,13 @@ import { BtnAgendar } from "../../Button/BtnCadastro/BtnCadastro"
 
 
 export const ModalConsulta = ({
+    navigation,
     visible,
     setShowModalConsult,
     clickButton,
     statusModal,
     setStatusModal,
     ...rest
-    // rest todas as outras propriedades do modal de um determinado componente nativo assim como o modal estamos usando todas as suas propriedades
 }) => {
     return(
         <Modal 
@@ -56,10 +56,9 @@ export const ModalConsulta = ({
                         maxLength={200}
                         customWidth={90}
                     />
-
                   
-                    <BtnModal>
-                        <BtnTitle>Confirmar</BtnTitle>
+                    <BtnModal onPress={() => navigation.replace('Clinica')}>
+                        <BtnTitle>Continuar</BtnTitle>
                     </BtnModal>
 
                     <BtnSub onPress={() => setShowModalConsult(false)}>
