@@ -4,10 +4,10 @@ import { CardPaciente } from '../../components/Cards/CardPaciente/CardPaciente'
 import { ModalConsulta } from '../../components/Modals/ModalConsulta/ModalConsulta'
 import { CardModalPaciente } from '../../components/Modals/ModalCard/ModalCard'
 import { useState } from 'react'
-import { BtnMedical } from '../../components/Button/Style'
+import { BtnMedical, BtnStethoscope } from '../../components/Button/Style'
 import { FontAwesome6 } from '@expo/vector-icons';
 import CalendarList from "../../components/Calendario/Index";
-import { ContainerBtn, ContainerConsulta, ContainerMedico } from '../../components/Container/Style'
+import { ContainerBtn, ContainerConsulta, ContainerMedico, MedicalInstrument } from '../../components/Container/Style'
 import { BtnCadastroM } from '../../components/Button/BtnCadastro/BtnCadastro'
 
 const ConsultasPaciente = [
@@ -59,6 +59,7 @@ export const PacienteConsulta = ({ navigation }) => {
                 renderItem={({ item }) =>
                     statusListaPaciente == item.situacao && (
                         <CardPaciente
+                            navigation={navigation}
                             onPressImage={() => setShowModalAppointment(true)}
                             source={require('../../../src/assets/img/ImageDoctor.png')}
                             name={'Dr. Claudio'}
@@ -71,11 +72,11 @@ export const PacienteConsulta = ({ navigation }) => {
             />
 
 
-            <ContainerMedico>
-                <BtnMedical onPress={() => setShowModalConsult(true)}>
-                    <FontAwesome6 name="stethoscope" size={28} color="#FBFBFB" />
-                </BtnMedical>
-            </ContainerMedico>
+            <MedicalInstrument>
+                <BtnStethoscope onPress={() => setShowModalConsult(true)}>
+                    <FontAwesome6 name="stethoscope" size={24} color="white" />
+                </BtnStethoscope>
+            </MedicalInstrument>
 
             <ModalConsulta
                 navigation={navigation}

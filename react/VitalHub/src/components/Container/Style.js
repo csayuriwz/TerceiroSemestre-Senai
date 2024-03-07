@@ -89,7 +89,12 @@ export const ContainerSub = styled.View`
     justify-content: space-between;
     align-items: center;
 `
+export const MedicalInstrument = styled.View`
+position: absolute;
+left: 80%;
+top: 86%;
 
+`
 
 export const ContainerLevantadoConsulta = styled.TouchableOpacity`
     background-color: #FBFBFB;

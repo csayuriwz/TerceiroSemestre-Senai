@@ -57,7 +57,7 @@ export const ModalConsulta = ({
                         customWidth={90}
                     />
                   
-                    <BtnModal onPress={() => navigation.replace('Clinica')}>
+                    <BtnModal onPress={() => {navigation.navigate('Clinica'); setShowModalConsult(false)} }>
                         <BtnTitle>Continuar</BtnTitle>
                     </BtnModal>
 

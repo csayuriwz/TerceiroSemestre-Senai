@@ -6,7 +6,7 @@ import { CardMedico } from "../../components/Cards/CardMedico/CardMedico"
 import { BtnModal, BtnSub, BtnSubText } from "../../components/Modals/ModalCancel/Style"
 import { BtnTitle } from "../../components/Button/Style"
 
-export const SelecionarMedico = () => {
+export const SelecionarMedico = ({navigation}) => {
 
     const Doctor = [
         {id: 1, 
@@ -55,12 +55,12 @@ export const SelecionarMedico = () => {
                 )}
             />
             {/* Botão */}
-            <BtnModal>
+            <BtnModal onPress={() => navigation.replace('Calendario')}>
                 {/* titulo do botao */}
                 <BtnTitle>Continuar</BtnTitle>
             </BtnModal>
 
-            <BtnSub>
+            <BtnSub onPress={() => navigation.replace('Clinica')}>
                 <BtnSubText>Cancelar</BtnSubText>
             </BtnSub>
         </ClinicContent>
