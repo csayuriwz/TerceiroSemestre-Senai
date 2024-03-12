@@ -8,10 +8,10 @@ export const Mapa = () => {
     return (
 
         <ContainerP>
-            <ProfilePicSub
+            {/* <ProfilePicSub
                 source={require('../../../src/assets/img/Mapa.png')}
                 resizeMode='cover'
-            />
+            /> */}
 
             <TitleSub>Clínica Natureh</TitleSub>
             <TextGray>São Paulo, SP</TextGray>

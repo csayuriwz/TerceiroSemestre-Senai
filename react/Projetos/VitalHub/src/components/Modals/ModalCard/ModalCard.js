@@ -6,6 +6,7 @@ import { InputLabelSub } from "../../Label/Style"
 
 export const ModalCard = ({
     visible,
+    navigation,
     setShowModalAppointment,
     ...rest
     // rest todas as outras propriedades do modal de um determinado componente nativo assim como o modal estamos usando todas as suas propriedades
@@ -103,6 +104,7 @@ export const CardModalPaciente = ({
 }
 export const AppointmentModalConsulta = ({
     visible,
+    navigation,
     setShowModalAppointment,
     ...rest
     // rest todas as outras propriedades do modal de um determinado componente nativo assim como o modal estamos usando todas as suas propriedades
@@ -150,12 +152,12 @@ export const AppointmentModalConsulta = ({
                     <ModalConsultContentText>
 
                         <InputLabelSub>Tipo da consulta</InputLabelSub>
-                        <TextModalCalendar>Rotina</TextModalCalendar>
+                        <TextModalCalendar>Rotina</TextModalCalendar> 
 
                     </ModalConsultContentText>
 
                     {/* Botão */}
-                    <BtnModalCardClinic>
+                    <BtnModalCardClinic onPress={() => {navigation.navigate('Mapa'); setShowModalAppointment(false)}  }>
 
                         <BtnTitle>Ver local da consulta</BtnTitle>
 

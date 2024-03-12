@@ -8,7 +8,7 @@ import { BtnTitle } from "../../components/Button/Style"
 import { AppointmentModalConsulta } from "../../components/Modals/ModalCard/ModalCard"
 
 
-export const CalendarioPaciente = () => {
+export const CalendarioPaciente = ({ navigation }) => {
     const [showModalAppointment, setShowModalAppointment] = useState(false)
     return (
         <ContainerCalendar>
@@ -29,12 +29,13 @@ export const CalendarioPaciente = () => {
                     <BtnTitle>Continuar</BtnTitle>
                 </BtnModal>
 
-                <BtnSub>
+                <BtnSub onPress={() => navigation.replace('SelecionarMedico')}>
                     <BtnSubText>Cancelar</BtnSubText>
                 </BtnSub>
             </ClinicContent>
 
             <AppointmentModalConsulta
+                navigation={navigation}
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
             />

@@ -5,9 +5,14 @@ import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 
 import {
   requestForegroundPermissionsAsync,//solicita a permissao de localizacao
-  getCurrentPositionAsync //captura a localizacao atual
+  getCurrentPositionAsync, //captura a localizacao atual
+
+  watchPositionAsync, //captura em tempos a loc
+  LocationAccuracy // precisao de captura
 } from 'expo-location'
-import { useEffect, useState } from 'react';
+
+//use effect = verificacoes em diferentes estados (atualizacao de paginas)
+import { useEffect, useState, useRef } from 'react';
 
 import MapViewDirections from 'react-native-maps-directions';
 
@@ -16,7 +21,12 @@ import { mapskey } from './Utils/MapsKey';
 
 export default function App() {
 
+  const mapReference = useRef(null)
   const [initialPosition, setInitialPosition] = useState(null)
+  const [finalPosition, setFinalPosition] = useState({
+    latitude: -23.5452,
+    longitude: -46.4741
+  })
 
   async function capturarLocalizacao() {
     const { granted } = await requestForegroundPermissionsAsync()
@@ -31,20 +41,50 @@ export default function App() {
 
   }
 
+  async function RecarregarVisualizacaoMapa() {
+    if (mapReference.current && initialPosition) {
+      await mapReference.current.fitToCoordinates(
+        [
+          { latitude: initialPosition.coords.latitude, longitude: initialPosition.coords.longitude },
+          { latitude: finalPosition.latitude, longitude: finalPosition.longitude },
+        ],
+        {
+          edgePadding: { top: 80, right: 80, bottom: 80, left: 80 },
+          animated: true
+        }
+      )
+    }
+  }
+
   useEffect(() => {
     capturarLocalizacao()
+
+    //capturar loc em tempo real
+    watchPositionAsync({
+      accuracy : LocationAccuracy.High,
+      timeInterval: 1000,
+      distanceInterval: 1
+    }, async (Response) => {
+      await setInitialPosition(Response)
+
+      mapReference.current?.animateCamera({
+        pitch: 60,
+        center: Response.coords
+      })
+    })
+
   }, [10000])
+
+  useEffect(() => {
+    RecarregarVisualizacaoMapa()
+  }, [initialPosition])
 
   return (
     <View style={styles.container}>
-
-
-
       {
-
         initialPosition != null
           ? (
-            <MapView initialRegion={{ latitude: initialPosition.coords.latitude, longitude: initialPosition.coords.longitude, latitudeDelta: 0.005, longitudeDelta: 0.005, }} style={styles.map} customMapStyle={grayMapStyle} provider={PROVIDER_GOOGLE}>
+            <MapView ref={mapReference} initialRegion={{ latitude: initialPosition.coords.latitude, longitude: initialPosition.coords.longitude, latitudeDelta: 0.005, longitudeDelta: 0.005, }} style={styles.map} customMapStyle={grayMapStyle} provider={PROVIDER_GOOGLE}>
 
               {/* cria um marcador no mapa */}
               <Marker
