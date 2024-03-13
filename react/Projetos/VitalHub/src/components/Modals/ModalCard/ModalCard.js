@@ -85,7 +85,7 @@ export const CardModalPaciente = ({
 
 
                     {/* Botão */}
-                    <BtnModalCard>
+                    <BtnModalCard >
 
                         <BtnTitle>Ver local da consulta</BtnTitle>
 
