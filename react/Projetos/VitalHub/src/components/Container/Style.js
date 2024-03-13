@@ -32,6 +32,10 @@ export const DataUser = styled.View`
     gap: 10px;
 `
 
+export const MapContainer = styled.View`
+    width: 100%;
+    width: 48%;
+`
 export const PerfilCityInputsContainer = styled.View`
   flex-direction: row;
   width: 90%;
