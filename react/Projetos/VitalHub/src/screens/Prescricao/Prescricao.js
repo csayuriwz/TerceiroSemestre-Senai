@@ -9,7 +9,54 @@ import { BtnCamera, BtnCameraText } from '../../components/Button/Style';
 import { BtnCard, BtnSubText } from '../../components/Modals/ModalCard/Style';
 import { PerfilInput } from '../../components/Input/PerfilInput/Index';
 
-export const Prescricao = () => {
+
+//import para funcionalidade da camera
+import { Camera, CameraType } from 'expo-camera';
+import * as MediaLibrary from 'expo-media-library';
+import { useEffect, useRef, useState } from 'react';
+import BtnPhoto from '../../components/BtnPhoto/BtnPhoto';
+
+export const Prescricao = ({navigation}) => {
+    const cameraRef = useRef(null)
+    const [tipoCamera, setTipoCamera] = useState(CameraType.front)
+    const [openModal, setOpenModal] = useState(false)
+    const [salvarPhoto, setSalvarPhoto] = useState(null)
+
+    useEffect(() => {
+        (async () => {
+            const { status: cameraStatus } = await Camera.requestCameraPermissionsAsync()
+
+            const { status: mediaStatus } = await MediaLibrary.requestPermissionsAsync()
+        })();
+    }, [])
+
+    async function CapturePhoto() {
+        if (cameraRef) {
+            const photo = await cameraRef.current.takePictureAsync()
+            setSalvarPhoto(photo.uri)
+
+            setOpenModal(true)
+
+            console.log(photo)
+        }
+    }
+
+    function ClearPhoto() {
+        setSalvarPhoto(null)
+
+        setOpenModal(false)
+    }
+
+    async function UploadPhoto() {
+        await MediaLibrary.createAssetAsync(salvarPhoto)
+            .then(() => {
+                alert('foto salva com sucesso')
+
+            }).catch(error => {
+                console.log('nao foi possivel salvar a foto')
+            })
+    }
+
     return (
         <ScrollForm>
             <ContainerP>
@@ -57,13 +104,14 @@ export const Prescricao = () => {
                 </ContainerPic>
 
                 <ContainerLabel>
+
+
                     <BtnCamera>
-                        <BtnCameraText>
+
+                        <BtnCameraText onPress={() => navigation.replace("Camera")}>
                             <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
                         </BtnCameraText>
-                        <BtnCameraText>
-                            enviar
-                        </BtnCameraText>
+
                     </BtnCamera>
                     <TextCancelSub>Cancelar</TextCancelSub>
                 </ContainerLabel>

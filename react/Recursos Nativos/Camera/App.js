@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { Camera, CameraType } from 'expo-camera';
+
+import * as MediaLibrary from 'expo-media-library';
+
 import { useEffect, useRef, useState } from 'react';
 
 import { FontAwesome } from '@expo/vector-icons';
@@ -16,6 +19,8 @@ export default function App() {
   useEffect(() => {
     (async () => {
       const { status: cameraStatus } = await Camera.requestCameraPermissionsAsync()
+
+      const {status : mediaStatus} = await MediaLibrary.requestPermissionsAsync()
     })();
   }, [])
 
@@ -29,6 +34,23 @@ export default function App() {
       console.log(photo)
     }
   }
+
+  function ClearPhoto() {
+    setSalvarPhoto(null)
+
+    setOpenModal(false)
+  }
+
+  async function UploadPhoto() {
+    await MediaLibrary.createAssetAsync(salvarPhoto)
+    .then (() =>{
+      alert('foto salva com sucesso')
+
+    }).catch(error => {
+      console.log('nao foi possivel salvar a foto')
+    })
+  }
+
 
   return (
     <View style={styles.container}>
@@ -46,15 +68,21 @@ export default function App() {
       </Camera>
 
       <TouchableOpacity style={styles.btnCapture} onPress={() => CapturePhoto()}>
-        <FontAwesome name='camera' size={23} color="#ffff" />
+        <FontAwesome name='camera' size={24} color="#ffff" />
       </TouchableOpacity>
 
       <Modal animationType='slide' transparent={false} visible={openModal}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', margin: 20 }}>
 
-          <View style={{ margin: 10, flexDirection: 'row' }}>
+          <View style={{ margin: 10, flexDirection: 'row', gap: 20 }}>
 
-            {/* botao de controle */}
+            <TouchableOpacity style={styles.btnClear} onPress={() => ClearPhoto()}>
+              <FontAwesome name='trash' size={36} color="#ff0000" />
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btnUpload} onPress={() => UploadPhoto()}>
+              <FontAwesome name='upload' size={36} color="#121212" />
+            </TouchableOpacity>
           </View>
 
           <Image
@@ -105,6 +133,20 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 10,
     backgroundColor: "#121212",
+
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  btnClear: {
+    padding: 20,
+    backgroundColor: "transparent",
+
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  btnUpload: {
+    padding: 20,
+    backgroundColor: "transparent",
 
     justifyContent: 'center',
     alignItems: 'center'
