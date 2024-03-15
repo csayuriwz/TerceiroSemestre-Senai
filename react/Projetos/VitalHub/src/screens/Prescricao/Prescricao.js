@@ -22,6 +22,8 @@ export const Prescricao = ({navigation}) => {
     const [openModal, setOpenModal] = useState(false)
     const [salvarPhoto, setSalvarPhoto] = useState(null)
 
+    const [fotoTirada, setFotoTirada] = useState (null)
+
     useEffect(() => {
         (async () => {
             const { status: cameraStatus } = await Camera.requestCameraPermissionsAsync()
@@ -99,7 +101,7 @@ export const Prescricao = ({navigation}) => {
                 <InputLabelE>Exames médicos</InputLabelE>
 
                 <ContainerPic>
-                    <MaterialCommunityIcons name="file-alert-outline" size={24} color="#4E4B59" />
+                    <MaterialCommunityIcons name="file-alert-outline" size={24} color="#4E4B59"  />
                     <TextPic>Nenhuma foto informada</TextPic>
                 </ContainerPic>
 
@@ -108,7 +110,7 @@ export const Prescricao = ({navigation}) => {
 
                     <BtnCamera>
 
-                        <BtnCameraText onPress={() => navigation.replace("Camera")}>
+                        <BtnCameraText onPress={() => navigation.replace("Camera", {setFotoTirada})}>
                             <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
                         </BtnCameraText>
 

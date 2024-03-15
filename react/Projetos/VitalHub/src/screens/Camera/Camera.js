@@ -8,14 +8,17 @@ import * as MediaLibrary from 'expo-media-library';
 import { useEffect, useRef, useState } from 'react';
 
 import { FontAwesome } from '@expo/vector-icons';
+import { Btn } from '../../components/Button/Style';
 
-export default function Camera2({ navigation }) {
+export default function Camera2({ navigation, setfotoTirada }) {
 
     const cameraRef = useRef(null)
     const [tipoCamera, setTipoCamera] = useState(CameraType.front)
     const [openModal, setOpenModal] = useState(false)
     const [lanterna, setLanterna] = useState(Camera.Constants.FlashMode.off)
     const [salvarPhoto, setSalvarPhoto] = useState(null)
+
+    
 
     useEffect(() => {
         (async () => {
@@ -33,8 +36,11 @@ export default function Camera2({ navigation }) {
             setOpenModal(true)
 
             console.log(photo)
+
+            await setfotoTirada(photo.uri);
         }
     }
+
 
     function ClearPhoto() {
         setSalvarPhoto(null)
@@ -51,7 +57,6 @@ export default function Camera2({ navigation }) {
                 console.log('nao foi possivel salvar a foto')
             })
     }
-
 
     return (
         <View style={styles.container}>
@@ -87,6 +92,12 @@ export default function Camera2({ navigation }) {
                         <TouchableOpacity style={styles.btnUpload} onPress={() => UploadPhoto()}>
                             <FontAwesome name='upload' size={36} color="#121212" />
                         </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.btnBack} onPress={() => navigation.replace("Prescricao")}>
+                            <FontAwesome name='mosquito' size={36} color="#121212" />
+                        </TouchableOpacity>
+
+                        
                     </View>
 
                     <Image
@@ -158,6 +169,16 @@ const styles = StyleSheet.create({
 
         justifyContent: 'center',
         alignItems: 'center'
-    }
+    },
+    btnBack: {
+        padding: 20,
+        backgroundColor: "transparent",
+        position: 'absolute',
+        bottom: 90,
+        right: 200,
+
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
 
 });
