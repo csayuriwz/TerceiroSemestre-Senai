@@ -4,7 +4,7 @@ import { ContainerLabel, ContainerLevantado, ContainerP, ContainerPic, Container
 import { ProfilePic } from '../../components/Image/Style';
 import { InputBox } from '../../components/InputBox/Index';
 import { InputLabelE } from '../../components/Label/Style';
-import { Subtitle, TextCancelSub, TextPic, TitleBlack } from '../../components/Title/Style';
+import { Subtitle, TextBtnCamera, TextCancelSub, TextPic, TitleBlack, TxtPic } from '../../components/Title/Style';
 import { BtnCamera, BtnCameraText } from '../../components/Button/Style';
 import { BtnCard, BtnSubText } from '../../components/Modals/ModalCard/Style';
 import { PerfilInput } from '../../components/Input/PerfilInput/Index';
@@ -16,13 +16,15 @@ import * as MediaLibrary from 'expo-media-library';
 import { useEffect, useRef, useState } from 'react';
 import BtnPhoto from '../../components/BtnPhoto/BtnPhoto';
 
-export const Prescricao = ({navigation}) => {
+export const Prescricao = ({ navigation }) => {
     const cameraRef = useRef(null)
     const [tipoCamera, setTipoCamera] = useState(CameraType.front)
     const [openModal, setOpenModal] = useState(false)
     const [salvarPhoto, setSalvarPhoto] = useState(null)
 
-    const [fotoTirada, setFotoTirada] = useState (null)
+    const [showCameraModal, setShowCameraModal] = useState(false)
+    const [cameraCapture, setCameraCapture] = useState(null)
+
 
     useEffect(() => {
         (async () => {
@@ -101,21 +103,32 @@ export const Prescricao = ({navigation}) => {
                 <InputLabelE>Exames médicos</InputLabelE>
 
                 <ContainerPic>
-                    <MaterialCommunityIcons name="file-alert-outline" size={24} color="#4E4B59"  />
-                    <TextPic>Nenhuma foto informada</TextPic>
+                    {cameraCapture == null ? (
+                        <>
+                            <MaterialCommunityIcons name="file-alert-outline" size={24} color="#4E4B59" />
+                            <TxtPic>Nenhuma foto informada</TxtPic>
+                        </>
+                    )
+                        : (
+                            <>
+                                <Image style={{ width: '100%', height: 120, borderRadius: 5 }}
+                                    source={{ uri: cameraCapture }}
+                                />
+                            </>
+
+                        )}
                 </ContainerPic>
 
                 <ContainerLabel>
-
-
-                    <BtnCamera>
-
-                        <BtnCameraText onPress={() => navigation.replace("Camera", {setFotoTirada})}>
+                    <BtnCamera onPress={() => setShowCameraModal(true)}>
+                        <TextBtnCamera>
                             <MaterialCommunityIcons name="camera-plus-outline" size={24} color="white" />
-                        </BtnCameraText>
-
+                        </TextBtnCamera>
+                        <TextBtnCamera>
+                            enviar
+                        </TextBtnCamera>
                     </BtnCamera>
-                    <TextCancelSub>Cancelar</TextCancelSub>
+                    <TextRed2 onPress={() => setCameraCapture(null)}>Cancelar</TextRed2>
                 </ContainerLabel>
 
                 <Separator></Separator>
@@ -136,6 +149,12 @@ export const Prescricao = ({navigation}) => {
                 <BtnCard>
                     <BtnSubText>Voltar</BtnSubText>
                 </BtnCard>
+
+                <CameraExpo
+                    visible={showCameraModal}
+                    setShowCameraModal={setShowCameraModal}
+                    setCameraCapture={setCameraCapture}
+                />
             </ContainerP>
         </ScrollForm>
     )

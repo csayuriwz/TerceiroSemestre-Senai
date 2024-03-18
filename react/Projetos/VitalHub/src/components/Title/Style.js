@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BtnTitle } from "../Button/Style";
 
 export const Title = styled.Text`
     font-family: 'MontserratAlternates_600SemiBold';
@@ -79,7 +80,9 @@ export const TextPic = styled.Text`
     /* width: 80%; */
     color: #4E4B59;
 `
-
+export const TextBtnCamera = styled(BtnTitle)`
+    color: #FFFFFF;
+`
 export const TextCancel = styled(TextGrayBold)`
     color: #C81D25;
 `
@@ -87,4 +90,12 @@ export const TextCancelSub = styled(TextCancel)`
     color: #C81D25;
     padding-right: 20px;
     padding-top: 10px;
+`
+export const TxtPic = styled.Text`
+    font-family: 'MontserratAlternates_500Medium';
+    font-size: 14px;
+    color: #33303E;
+    text-align: center;
+    /* width: 80%; */
+    color: #4E4B59;
 `

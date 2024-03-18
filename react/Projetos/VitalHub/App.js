@@ -21,8 +21,6 @@ import { ConsultasMedico } from './src/screens/ConsultasMedico/ConsultasMedico';
 import { Clinica } from './src/screens/SelecionarClinica/SelecionarClinica';
 import { PacienteConsulta } from './src/screens/ConsultasPaciente/ConsultasPaciente';
 import { Main } from './src/screens/Main/Main';
-import Camera from './src/screens/Camera/Camera';
-import Camera2 from './src/screens/Camera/Camera';
 
 
 const Stack = createNativeStackNavigator()

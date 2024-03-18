@@ -74,7 +74,6 @@ export const BtnCameraText = styled(BtnTitle)`
     color: #FFFFFF;
 `
 
-
 export const BtnStethoscope = styled.TouchableOpacity`
 
 background-color: #49B3BA;
