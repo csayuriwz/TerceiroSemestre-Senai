@@ -135,11 +135,7 @@ export default function App() {
               component={Prescricao}
               options={{ title: "Prescrição" }}
             />
-            <Stack.Screen
-              name='Camera'
-              component={Camera2}
-              options={{ title: "Camera" }}
-            />
+
           </Stack.Navigator>
         </NavigationContainer>
   );

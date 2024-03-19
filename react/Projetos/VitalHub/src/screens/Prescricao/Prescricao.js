@@ -4,7 +4,7 @@ import { ContainerLabel, ContainerLevantado, ContainerP, ContainerPic, Container
 import { ProfilePic } from '../../components/Image/Style';
 import { InputBox } from '../../components/InputBox/Index';
 import { InputLabelE } from '../../components/Label/Style';
-import { Subtitle, TextBtnCamera, TextCancelSub, TextPic, TitleBlack, TxtPic } from '../../components/Title/Style';
+import { Subtitle, TextBtnCamera, TextCancel, TextCancelSub, TextPic, TitleBlack, TxtPic } from '../../components/Title/Style';
 import { BtnCamera, BtnCameraText } from '../../components/Button/Style';
 import { BtnCard, BtnSubText } from '../../components/Modals/ModalCard/Style';
 import { PerfilInput } from '../../components/Input/PerfilInput/Index';
@@ -128,7 +128,7 @@ export const Prescricao = ({ navigation }) => {
                             enviar
                         </TextBtnCamera>
                     </BtnCamera>
-                    <TextRed2 onPress={() => setCameraCapture(null)}>Cancelar</TextRed2>
+                    <TextCancel onPress={() => setCameraCapture(null)}>Cancelar</TextCancel>
                 </ContainerLabel>
 
                 <Separator></Separator>
