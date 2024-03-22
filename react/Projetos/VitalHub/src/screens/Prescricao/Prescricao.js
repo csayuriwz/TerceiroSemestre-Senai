@@ -15,6 +15,7 @@ import { Camera, CameraType } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import { useEffect, useRef, useState } from 'react';
 import BtnPhoto from '../../components/BtnPhoto/BtnPhoto';
+import { CameraExpo } from '../../components/Camera/Camera';
 
 export const Prescricao = ({ navigation }) => {
     const cameraRef = useRef(null)
